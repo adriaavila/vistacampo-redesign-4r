@@ -1,6 +1,6 @@
 "use client"
 
-import { Suspense } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -11,6 +11,7 @@ import { WhatsAppIcon } from "@/components/whatsapp-icon"
 import { WHATSAPP_LINK } from "@/lib/constants"
 import { TypingText } from "@/components/TypingText"
 import { useTranslation } from "react-i18next"
+import { initI18next } from "@/app/i18n"
 
 // Fallback component for loading state
 function LoadingFallback() {
@@ -24,9 +25,21 @@ function LoadingFallback() {
   );
 }
 
-// Main content component wrapped in Suspense
-function HomePageContent() {
+export default function HomePage() {
   const { t } = useTranslation("common");
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    const initializeI18n = async () => {
+      await initI18next("es");
+      setIsReady(true);
+    };
+    initializeI18n();
+  }, []);
+
+  if (!isReady) {
+    return <LoadingFallback />;
+  }
 
   return (
     <div className="min-h-screen">
@@ -564,13 +577,4 @@ function HomePageContent() {
       </section>
     </div>
   )
-}
-
-// Main export with Suspense wrapper
-export default function HomePage() {
-  return (
-    <Suspense fallback={<LoadingFallback />}>
-      <HomePageContent />
-    </Suspense>
-  );
 }
