@@ -15,9 +15,9 @@ export async function GET(
     let postsDirectory: string
     
     if (lang === 'en') {
-      postsDirectory = path.join(process.cwd(), 'posts', 'en')
+      postsDirectory = path.join(/* turbopackIgnore: true */ process.cwd(), 'posts', 'en')
     } else {
-      postsDirectory = path.join(process.cwd(), 'posts')
+      postsDirectory = path.join(/* turbopackIgnore: true */ process.cwd(), 'posts')
     }
 
     // Check if directory exists

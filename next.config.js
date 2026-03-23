@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 // App Router does not support i18n routing via next.config.js.
-// Locale detection and redirects are handled in middleware.ts.
+// Locale detection and redirects are handled in proxy.ts (Next.js 16+).
 
 // Bundle analyzer
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -8,9 +8,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -55,15 +52,6 @@ const nextConfig = {
       },
       {
         source: '/images/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          }
-        ]
-      },
-      {
-        source: '/_next/static/(.*)',
         headers: [
           {
             key: 'Cache-Control',

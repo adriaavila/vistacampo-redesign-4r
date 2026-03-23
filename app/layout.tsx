@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     generator: 'v0.dev'
 }
 
-// Locale-aware root layout using dynamic segment [lng] handled by middleware redirects
+// Locale-aware root layout using dynamic segment [lng] handled by proxy redirects
 export default function RootLayout({
   children,
 }: {
