@@ -40,18 +40,17 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* 1. Specialized Rehabilitation Center - Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50 overflow-hidden">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50 overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/vc-panoramica.webp"
+            src="/images/vc-hero-bg.png"
             alt="Vistacampo panoramic view"
             fill
             priority
-            quality={70}
-            placeholder="blur"
-            blurDataURL="/images/vc-panoramica-blur.webp"
-            className="object-cover w-full h-full"
+            quality={95}
+            sizes="100vw"
+            className="object-cover object-[56%_center] md:object-center w-full h-full"
           />
         </div>
 
@@ -62,9 +61,11 @@ export default function HomePage() {
             <Badge variant="secondary" className="mb-4 text-rose-100 bg-rose-900/40">
               {t("badges.specializedRehab")}
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-emerald-200 via-teal-100 to-blue-200 bg-clip-text text-transparent drop-shadow-lg">Your recovery is our</span>{" "}
-              <span className="text-rose-200 drop-shadow-lg">mission</span>
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">
+              <span className="text-white">Your recovery is our</span>{" "}
+              <span className="bg-gradient-to-r from-emerald-300 via-emerald-400 to-emerald-500 bg-clip-text text-transparent [text-shadow:0_2px_14px_rgba(0,0,0,0.45)]">
+                mission
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
               At Vistacampo we offer comprehensive addiction treatment in a safe, private and professional environment

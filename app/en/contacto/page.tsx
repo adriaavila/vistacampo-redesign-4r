@@ -23,11 +23,17 @@ export default function ContactPage() {
     message: "",
     privacy: false,
   })
+  const [submitMessage, setSubmitMessage] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here would go the logic to send the form
-    console.log("Form submitted:", formData)
+    setSubmitMessage("Thanks! Your message is ready. Please confirm sending from your email app.")
+
+    const subject = encodeURIComponent("Vistacampo Contact Request")
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nInquiry Type: ${formData.inquiryType}\n\nMessage:\n${formData.message}`,
+    )
+    window.location.href = `mailto:info@vistacampo.com?subject=${subject}&body=${body}`
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -176,9 +182,11 @@ export default function ContactPage() {
                           <Label htmlFor="name">Full name *</Label>
                           <Input
                             id="name"
+                            name="name"
                             value={formData.name}
                             onChange={(e) => handleInputChange("name", e.target.value)}
-                            placeholder="Enter your full name"
+                            placeholder="Enter your full name…"
+                            autoComplete="name"
                             required
                           />
                         </div>
@@ -186,10 +194,13 @@ export default function ContactPage() {
                           <Label htmlFor="email">Email *</Label>
                           <Input
                             id="email"
+                            name="email"
                             type="email"
                             value={formData.email}
                             onChange={(e) => handleInputChange("email", e.target.value)}
-                            placeholder="Enter your email"
+                            placeholder="Enter your email…"
+                            autoComplete="email"
+                            spellCheck={false}
                             required
                           />
                         </div>
@@ -200,16 +211,20 @@ export default function ContactPage() {
                           <Label htmlFor="phone">Phone</Label>
                           <Input
                             id="phone"
+                            name="phone"
+                            type="tel"
                             value={formData.phone}
                             onChange={(e) => handleInputChange("phone", e.target.value)}
-                            placeholder="Enter your phone number"
+                            placeholder="Enter your phone number…"
+                            autoComplete="tel"
+                            inputMode="tel"
                           />
                         </div>
                         <div>
                           <Label htmlFor="inquiryType">Type of inquiry</Label>
                           <Select value={formData.inquiryType} onValueChange={(value) => handleInputChange("inquiryType", value)}>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select the type of inquiry" />
+                            <SelectTrigger aria-label="Type of inquiry">
+                              <SelectValue placeholder="Select the type of inquiry…" />
                             </SelectTrigger>
                             <SelectContent>
                               <SelectItem value="information">General information</SelectItem>
@@ -226,10 +241,12 @@ export default function ContactPage() {
                         <Label htmlFor="message">Message *</Label>
                         <Textarea
                           id="message"
+                          name="message"
                           value={formData.message}
                           onChange={(e) => handleInputChange("message", e.target.value)}
-                          placeholder="Tell us how we can help you..."
+                          placeholder="Tell us how we can help you…"
                           rows={5}
+                          autoComplete="off"
                           required
                         />
                       </div>
@@ -238,6 +255,7 @@ export default function ContactPage() {
                         <input
                           type="checkbox"
                           id="privacy"
+                          name="privacy"
                           checked={formData.privacy}
                           onChange={(e) => setFormData((prev) => ({ ...prev, privacy: e.target.checked }))}
                           className="rounded border-gray-300"
@@ -254,8 +272,13 @@ export default function ContactPage() {
 
                       <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700">
                         <Send className="mr-2 h-4 w-4" />
-                        Send message
+                        Send Message
                       </Button>
+                      {submitMessage ? (
+                        <p className="text-sm text-emerald-700" aria-live="polite">
+                          {submitMessage}
+                        </p>
+                      ) : null}
                     </form>
                   </CardContent>
                 </Card>

@@ -17,7 +17,7 @@ export function Header() {
   const pathname = usePathname()
 
   // Determine current locale from pathname
-  const locale = pathname?.split("/")[1] === "es" ? "es" : "en"
+  const locale = pathname?.split("/")[1] === "en" ? "en" : "es"
   const base = `/${locale}`
 
   const navigation = [
@@ -94,20 +94,20 @@ export function Header() {
                 <WhatsAppIcon className="mr-2 h-4 w-4" />
                 {locale === "en" ? "Request help" : "Solicita ayuda"}
               </Button>
-              <Button size="icon" className="sm:hidden rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-lg">
+              <Button size="icon" className="sm:hidden rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-lg" aria-label={locale === "en" ? "Open WhatsApp chat" : "Abrir chat de WhatsApp"}>
                 <WhatsAppIcon className="h-5 w-5" />
               </Button>
             </a>
 
             {/* Social Icons - Hidden on smaller screens to prevent overlap */}
             <div className="hidden xl:flex items-center space-x-3">
-               <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+               <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors" aria-label={locale === "en" ? "Visit our Facebook page" : "Visita nuestra página de Facebook"}>
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+              <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors" aria-label={locale === "en" ? "Visit our Instagram profile" : "Visita nuestro perfil de Instagram"}>
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+              <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors" aria-label={locale === "en" ? "Visit our YouTube channel" : "Visita nuestro canal de YouTube"}>
                 <FontAwesomeIcon icon={faYoutube} className="h-4 w-4" />
               </a>
             </div>
@@ -115,7 +115,7 @@ export function Header() {
             {/* Mobile Navigation */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="lg:hidden">
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" aria-label={locale === "en" ? "Open navigation menu" : "Abrir menú de navegación"}>
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
@@ -164,13 +164,13 @@ export function Header() {
 
                   {/* Social icons in mobile drawer */}
                   <div className="flex items-center space-x-4 mt-4 pt-4 border-t">
-                    <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+                    <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors" aria-label={locale === "en" ? "Visit our Facebook page" : "Visita nuestra página de Facebook"}>
                       <Facebook className="h-5 w-5" />
                     </a>
-                    <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+                    <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors" aria-label={locale === "en" ? "Visit our Instagram profile" : "Visita nuestro perfil de Instagram"}>
                       <Instagram className="h-5 w-5" />
                     </a>
-                    <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors">
+                    <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition-colors" aria-label={locale === "en" ? "Visit our YouTube channel" : "Visita nuestro canal de YouTube"}>
                       <FontAwesomeIcon icon={faYoutube} className="h-5 w-5" />
                     </a>
                   </div>

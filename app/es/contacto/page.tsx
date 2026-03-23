@@ -23,11 +23,17 @@ export default function ContactoPage() {
     mensaje: "",
     privacidad: false,
   })
+  const [submitMessage, setSubmitMessage] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Aquí iría la lógica para enviar el formulario
-    console.log("Formulario enviado:", formData)
+    setSubmitMessage("Gracias. Tu mensaje está listo; confirma el envío desde tu aplicación de correo.")
+
+    const subject = encodeURIComponent("Solicitud de Contacto Vistacampo")
+    const body = encodeURIComponent(
+      `Nombre: ${formData.nombre}\nEmail: ${formData.email}\nTeléfono: ${formData.telefono}\nTipo de consulta: ${formData.tipoConsulta}\n\nMensaje:\n${formData.mensaje}`,
+    )
+    window.location.href = `mailto:info@vistacampo.com?subject=${subject}&body=${body}`
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -176,9 +182,11 @@ export default function ContactoPage() {
                           <Label htmlFor="nombre">Nombre completo *</Label>
                           <Input
                             id="nombre"
+                            name="nombre"
                             value={formData.nombre}
                             onChange={(e) => handleInputChange("nombre", e.target.value)}
-                            placeholder="Ingresa tu nombre completo"
+                            placeholder="Ingresa tu nombre completo…"
+                            autoComplete="name"
                             required
                           />
                         </div>
@@ -186,10 +194,13 @@ export default function ContactoPage() {
                           <Label htmlFor="email">Email *</Label>
                           <Input
                             id="email"
+                            name="email"
                             type="email"
                             value={formData.email}
                             onChange={(e) => handleInputChange("email", e.target.value)}
-                            placeholder="Ingresa tu email"
+                            placeholder="Ingresa tu email…"
+                            autoComplete="email"
+                            spellCheck={false}
                             required
                           />
                         </div>
@@ -200,16 +211,20 @@ export default function ContactoPage() {
                           <Label htmlFor="telefono">Teléfono</Label>
                           <Input
                             id="telefono"
+                            name="telefono"
+                            type="tel"
                             value={formData.telefono}
                             onChange={(e) => handleInputChange("telefono", e.target.value)}
-                            placeholder="Ingresa tu teléfono"
+                            placeholder="Ingresa tu teléfono…"
+                            autoComplete="tel"
+                            inputMode="tel"
                           />
                         </div>
                         <div>
                           <Label htmlFor="tipoConsulta">Tipo de consulta</Label>
                           <Select value={formData.tipoConsulta} onValueChange={(value) => handleInputChange("tipoConsulta", value)}>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Selecciona el tipo de consulta" />
+                            <SelectTrigger aria-label="Tipo de consulta">
+                              <SelectValue placeholder="Selecciona el tipo de consulta…" />
                             </SelectTrigger>
                             <SelectContent>
                               <SelectItem value="informacion">Información general</SelectItem>
@@ -226,10 +241,12 @@ export default function ContactoPage() {
                         <Label htmlFor="mensaje">Mensaje *</Label>
                         <Textarea
                           id="mensaje"
+                          name="mensaje"
                           value={formData.mensaje}
                           onChange={(e) => handleInputChange("mensaje", e.target.value)}
-                          placeholder="Cuéntanos cómo podemos ayudarte..."
+                          placeholder="Cuéntanos cómo podemos ayudarte…"
                           rows={5}
+                          autoComplete="off"
                           required
                         />
                       </div>
@@ -238,6 +255,7 @@ export default function ContactoPage() {
                         <input
                           type="checkbox"
                           id="privacidad"
+                          name="privacidad"
                           checked={formData.privacidad}
                           onChange={(e) => setFormData((prev) => ({ ...prev, privacidad: e.target.checked }))}
                           className="rounded border-gray-300"
@@ -254,8 +272,13 @@ export default function ContactoPage() {
 
                       <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700">
                         <Send className="mr-2 h-4 w-4" />
-                        Enviar mensaje
+                        Enviar Mensaje
                       </Button>
+                      {submitMessage ? (
+                        <p className="text-sm text-emerald-700" aria-live="polite">
+                          {submitMessage}
+                        </p>
+                      ) : null}
                     </form>
                   </CardContent>
                 </Card>

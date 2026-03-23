@@ -13,7 +13,7 @@ export function Footer() {
   const pathname = usePathname()
   
   // Determine current locale from pathname (same as header)
-  const locale = pathname?.split("/")[1] === "es" ? "es" : "en"
+  const locale = pathname?.split("/")[1] === "en" ? "en" : "es"
   const isEn = locale === "en"
 
   return (
@@ -32,13 +32,13 @@ export function Footer() {
               }
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors" aria-label={isEn ? "Visit our Facebook page" : "Visita nuestra página de Facebook"}>
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="https://www.instagram.com/centro_vistacampo/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors" aria-label={isEn ? "Visit our Instagram profile" : "Visita nuestro perfil de Instagram"}>
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="https://www.youtube.com/@juliogonzalezfilesari0" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors" aria-label={isEn ? "Visit our YouTube channel" : "Visita nuestro canal de YouTube"}>
                 <FontAwesomeIcon icon={faYoutube} className="h-5 w-5" />
               </a>
             </div>
