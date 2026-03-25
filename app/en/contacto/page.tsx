@@ -49,10 +49,9 @@ export default function ContactPage() {
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Contact
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">We are here to help you</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Speak with a specialist today</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Our team is available 24/7 to provide you with the guidance and support you need. Take the first
-              step towards your recovery.
+              Confidential guidance is available 24/7 to help you understand admission, treatment, and next steps.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
@@ -84,8 +83,8 @@ export default function ContactPage() {
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact information</h2>
                   <p className="text-lg text-gray-700 mb-8">
-                    Contact us through any of these means. Our admissions team will provide you with all the
-                    information you need in a confidential and professional manner.
+                    Reach out through any of these channels for clear, confidential guidance on admission, treatment,
+                    and next steps.
                   </p>
                 </div>
 
@@ -296,7 +295,8 @@ export default function ContactPage() {
               Need urgent help?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              If you need immediate help, don't hesitate to contact us. Our team is available 24/7 to provide you with the support you need.
+              If you need immediate help, reach out now. Confidential support is available 24/7 to guide the next
+              step.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">

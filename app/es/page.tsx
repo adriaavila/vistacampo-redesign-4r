@@ -68,14 +68,14 @@ export default function HomePage() {
               {t("badges.specializedRehab")}
             </Badge>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">
-              <span className="text-white">Tu recuperación es nuestra</span>{" "}
+              <span className="text-white">Tu recuperación, en manos</span>{" "}
               <span className="bg-gradient-to-r from-emerald-300 via-emerald-400 to-emerald-500 bg-clip-text text-transparent [text-shadow:0_2px_14px_rgba(0,0,0,0.45)]">
-                misión
+                expertas
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-              En Vistacampo ofrecemos tratamiento integral para adicciones en un ambiente seguro, privado y profesional
-              en Colonia Tovar, Venezuela.
+              Atención médica y psicológica especializada en un entorno discreto, seguro y profesional en Colonia
+              Tovar, Venezuela.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
@@ -130,16 +130,15 @@ export default function HomePage() {
                   Pioneros en Tratamiento de Adicciones en Venezuela
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  El Centro Vistacampo es una institución residencial privada, pionera en la desintoxicación y
-                  tratamiento de adicciones a sustancias como el alcohol, cocaína, marihuana, tabaco, cigarrillos
-                  electrónicos, pastillas de prescripción, drogas de diseño, y comida emocional, ubicada en la Colonia Tovar.
+                  El Centro Vistacampo es una institución residencial privada y pionera en desintoxicación y
+                  tratamiento de adicciones a sustancias como alcohol, cocaína, marihuana, tabaco, cigarrillos
+                  electrónicos, pastillas de prescripción, drogas de diseño y comida emocional, ubicada en Colonia Tovar.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Además, tratamos conductas adictivas como la ludopatía, videojuegos, celulares, redes sociales,
-                  trabajo, sexo, deporte, cirugías cosméticas, traumas, patología dual. Tratamos en un ambiente de alta
-                  seguridad y confidencialidad a jóvenes y adultos cuyo consumo o conducta adictiva está afectando su
-                  calidad de vida ocasionándoles un inmenso sufrimiento tanto a ellos como a sus familiares y seres
-                  queridos.
+                  También abordamos conductas adictivas como ludopatía, videojuegos, celulares, redes sociales,
+                  trabajo, sexo, deporte, cirugías cosméticas, traumas y patología dual. Atendemos, con altos
+                  estándares de seguridad y confidencialidad, a jóvenes y adultos cuyo consumo o conducta adictiva ya
+                  impacta su calidad de vida y la de sus familiares.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -211,8 +210,8 @@ export default function HomePage() {
                 Una historia de recuperación y esperanza
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Conoce la historia personal que inspiró la creación de Vistacampo y nuestro compromiso con tu
-                recuperación.
+                Conoce la historia personal que inspiró la creación de Vistacampo y el compromiso que guía este
+                proyecto.
               </p>
             </div>
 
@@ -262,19 +261,19 @@ export default function HomePage() {
 
                     <p className="text-gray-700 leading-relaxed mb-4">
                       Fue así que fundamos el Centro Terapéutico Vistacampo, junto a un equipo multidisciplinario y
-                      científicamente especializado de médicos, psiquiatras, monitores y terapeutas; con la
-                      característica especial de ser adictos recuperados, muchos de ellos, en el mismo Centro.
+                      científicamente especializado de médicos, psiquiatras, monitores y terapeutas; varios de ellos,
+                      además, con experiencia de recuperación personal.
                     </p>
 
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      Un sueño se ha cumplido y un compromiso también. Podemos decir con humildad y entusiasmo, a
-                      quienes estén sufriendo por sí o por un familiar, que ahora tienen un lugar en Venezuela donde
-                      recibir un tratamiento profesional y científicamente sustentado.
+                      Un sueño se ha cumplido y también un compromiso. Hoy, quienes atraviesan esta situación o
+                      acompañan a un familiar cuentan con un lugar en Venezuela donde recibir un tratamiento profesional
+                      y científicamente sustentado.
                     </p>
 
                     <div className="bg-white p-6 rounded-lg shadow-lg border border-emerald-200 my-6">
                       <p className="text-gray-700 leading-relaxed mb-4 font-medium">
-                        Solo tienen que dar el primer paso y contactarnos en Centro Vistacampo{" "}
+                        Solo hace falta dar el primer paso y contactar a Centro Vistacampo{" "}
                         <a
                           href={WHATSAPP_LINK}
                           target="_blank"
@@ -289,9 +288,8 @@ export default function HomePage() {
                     </div>
 
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      Aquí te acompañaremos para emprender el camino hacia una verdadera recuperación, con la dignidad y
-                      el respeto que todos merecemos, cuando en un momento de nuestras vidas, perdemos el control y, sin
-                      poder evitarlo, pisamos fondo…
+                      Aquí te acompañamos para iniciar un camino real de recuperación, con la dignidad y el respeto que
+                      todos merecemos cuando la vida se desordena y hace falta pedir ayuda.
                     </p>
 
                     <p className="text-emerald-700 font-semibold text-lg">Esperamos por ti.</p>
@@ -447,8 +445,8 @@ export default function HomePage() {
                 Historias de recuperación y esperanza
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Las experiencias de nuestros pacientes y sus familias son nuestro mayor testimonio del compromiso y la
-                efectividad de nuestro tratamiento.
+                Las experiencias de pacientes y familias son la mejor prueba del compromiso y la efectividad del
+                tratamiento.
               </p>
             </div>
 

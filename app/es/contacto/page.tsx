@@ -49,10 +49,9 @@ export default function ContactoPage() {
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Contacto
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Estamos aquí para ayudarte</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">Habla con un especialista hoy</h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Nuestro equipo está disponible 24/7 para brindarte la orientación y el apoyo que necesitas. Da el primer
-              paso hacia tu recuperación.
+              Atención confidencial 24/7 para orientarte con claridad sobre admisión, tratamiento y próximos pasos.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
@@ -84,8 +83,8 @@ export default function ContactoPage() {
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Información de contacto</h2>
                   <p className="text-lg text-gray-700 mb-8">
-                    Contáctanos por cualquiera de estos medios. Nuestro equipo de admisiones te brindará toda la
-                    información que necesitas de manera confidencial y profesional.
+                    Contáctanos por cualquiera de estos medios. Recibirás orientación confidencial, clara y profesional
+                    sobre admisión, tratamiento y próximos pasos.
                   </p>
                 </div>
 
@@ -296,7 +295,8 @@ export default function ContactoPage() {
               ¿Necesitas ayuda urgente?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Si necesitas ayuda inmediata, no dudes en contactarnos. Nuestro equipo está disponible 24/7 para brindarte el apoyo que necesitas.
+              Si necesitas ayuda inmediata, contáctanos ahora. Atención confidencial 24/7 para acompañarte en el
+              siguiente paso.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">

@@ -27,8 +27,8 @@ export function Footer() {
             </div>
             <p className="text-gray-300 leading-relaxed">
               {isEn
-                ? "Specialized center in addiction rehabilitation in Colonia Tovar, Venezuela. Your recovery is our mission."
-                : "Centro especializado en rehabilitación de adicciones en Colonia Tovar, Venezuela. Tu recuperación es nuestra misión."
+                ? "Confidential addiction treatment in Colonia Tovar, Venezuela. Professional care to begin recovery with clarity and support."
+                : "Tratamiento integral y confidencial para adicciones en Colonia Tovar, Venezuela. Atención profesional para empezar a recuperar el control."
               }
             </p>
             <div className="flex space-x-4">

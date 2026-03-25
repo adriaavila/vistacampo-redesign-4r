@@ -5,9 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-import { Menu, MessageCircle, Mail, Facebook, Instagram, MapPin } from "lucide-react"
-import { WhatsAppIcon } from "./whatsapp-icon"
-import { WHATSAPP_LINK, WHATSAPP_LINK_EN } from "@/lib/constants"
+import { Menu, Facebook, Instagram } from "lucide-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { usePathname } from "next/navigation"
@@ -60,7 +58,7 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right side - Language switcher, WhatsApp, Social icons, Mobile menu */}
+          {/* Right side - Language switcher, Social icons, Mobile menu */}
           <div className="flex items-center gap-3">
             {/* Language switcher */}
             <div className="hidden md:flex items-center">
@@ -87,17 +85,6 @@ export function Header() {
                 </Link>
               </div>
             </div>
-
-            {/* WhatsApp Button */}
-            <a href={locale === "en" ? WHATSAPP_LINK_EN : WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" aria-label={locale === "en" ? "Request help on WhatsApp" : "Solicita ayuda por WhatsApp"}>
-              <Button className="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-700 shadow-lg">
-                <WhatsAppIcon className="mr-2 h-4 w-4" />
-                {locale === "en" ? "Request help" : "Solicita ayuda"}
-              </Button>
-              <Button size="icon" className="sm:hidden rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-lg" aria-label="Abrir chat de WhatsApp">
-                <WhatsAppIcon className="h-5 w-5" />
-              </Button>
-            </a>
 
             {/* Social Icons - Hidden on smaller screens to prevent overlap */}
             <div className="hidden xl:flex items-center space-x-3">
@@ -175,12 +162,6 @@ export function Header() {
                     </a>
                   </div>
 
-                  <a href={locale === "en" ? WHATSAPP_LINK_EN : WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700">
-                      <WhatsAppIcon className="mr-2 h-4 w-4" />
-                      {locale === "en" ? "Request help" : "Solicita ayuda"}
-                    </Button>
-                  </a>
                 </div>
               </SheetContent>
             </Sheet>

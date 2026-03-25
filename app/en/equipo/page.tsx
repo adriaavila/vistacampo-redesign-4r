@@ -424,17 +424,17 @@ export default function TeamPage() {
               Ready to start your recovery journey?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Our team is ready to support you every step of the way. Contact us to learn more about our treatment programs.
+              Speak with a specialist to understand the treatment approach and the next steps with clarity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/en/contacto">
                 <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  Contact our team
+                  Contact a specialist
                 </Button>
               </Link>
               <Link href="/en/tratamiento">
                 <Button size="lg" variant="outline" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  Learn about our treatment
+                  Explore treatment options
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>

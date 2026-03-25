@@ -186,7 +186,7 @@ export default function NewsPage() {
               Need help with an addiction?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Our team of experts is available to provide you with the guidance and support you need.
+              Speak with a specialist for clear, confidential guidance on treatment and next steps.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/en/contacto">
@@ -196,7 +196,7 @@ export default function NewsPage() {
               </Link>
               <Link href="/en/tratamiento">
                 <Button size="lg" variant="outline" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  Learn about our treatment
+                  Explore treatment options
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>

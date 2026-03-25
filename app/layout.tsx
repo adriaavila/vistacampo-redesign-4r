@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
     description:
-      "Tu recuperación es nuestra misión. Centro especializado en tratamiento integral de adicciones en Colonia Tovar, Venezuela.",
+      "Tratamiento integral y confidencial para adicciones en Colonia Tovar, Venezuela.",
     url: "https://vistacampo.com",
     siteName: "Vistacampo",
     locale: "es_VE",
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
     description:
-      "Tu recuperación es nuestra misión. Centro especializado en tratamiento integral de adicciones en Colonia Tovar, Venezuela.",
+      "Tratamiento integral y confidencial para adicciones en Colonia Tovar, Venezuela.",
   },
   robots: {
     index: true,
@@ -69,7 +68,7 @@ export default function RootLayout({
   const lng: Locale = defaultLocale
 
   return (
-    <html lang={lng} suppressHydrationWarning>
+    <html lang={lng} className="light">
       <head>
         {/* SEO: locale alternates (hreflang). Use static base to avoid runtime template parsing issues */}
         <link rel="alternate" hrefLang="es" href="https://vistacampo.com/es/" />
@@ -84,11 +83,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <I18nProvider lng={lng}>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </ThemeProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
           <Analytics />
           <SpeedInsights />
           <PerformanceMonitor />

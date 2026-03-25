@@ -2,7 +2,7 @@
   "language": "English",
   "site": {
     "title": "Vistacampo - Addiction Rehabilitation Center in Colonia Tovar",
-    "description": "Specialized center for addiction treatment in Colonia Tovar, Venezuela. We offer medical detox, individual and group therapy in a safe and confidential environment."
+    "description": "Specialized addiction treatment in Colonia Tovar, Venezuela. Medical detox, individual and group therapy, and confidential care in a safe setting."
   },
   "nav": {
     "home": "Home",
@@ -21,14 +21,14 @@
     "contactWhatsApp": "Contact via WhatsApp",
     "requestHelp": "Request help",
     "requestHelpNow": "Request help now",
-    "learnMoreTreatment": "Learn more about our treatment",
-    "learnMoreAboutUs": "Learn more about us"
+    "learnMoreTreatment": "Learn about treatment",
+    "learnMoreAboutUs": "Learn more about Vistacampo"
   },
   "badges": {
     "specializedRehab": "Specialized rehabilitation center",
     "aboutVistacampo": "About Vistacampo",
     "founderMessage": "Founder’s message",
-    "ourServices": "Our services",
+    "ourServices": "Services",
     "testimonials": "Testimonials"
   },
   "features": {
@@ -40,7 +40,7 @@
   },
   "cta": {
     "ready": "Ready to take the first step?",
-    "text": "If you feel you’ve hit rock bottom and it’s time to make the decision to pause, recover your life, and free yourself from the terrible dependence on alcohol and other drugs; if you can’t bear to see your family and friends suffer as a consequence of your uncontrollable use; then, count on us."
+    "text": "If you feel you have reached your limit and it is time to decide on a change, recovery starts with a clear first step. Here you will find a team ready to help you move forward."
   },
   "lang": {
     "es": "ES",
@@ -51,19 +51,19 @@
   "treatment": {
     "meta": {
       "title": "Addiction Treatment - Therapeutic Programs | Vistacampo",
-      "description": "Discover our comprehensive addiction treatment programs. Medical detox, individual and group therapy, and post-treatment follow-up in Colonia Tovar, Venezuela.",
+      "description": "Explore comprehensive addiction treatment programs. Medical detox, individual and group therapy, and post-treatment follow-up in Colonia Tovar, Venezuela.",
       "keywords": "addiction treatment, detox, therapy, rehabilitation, Colonia Tovar, Venezuela"
     },
     "hero": {
       "badge": "Therapeutic programs",
       "title": "Comprehensive and personalized treatment",
-      "subtitle": "Our specialized medical and psychological approach will support you at every stage of your recovery, from detoxification to long-term follow-up.",
+      "subtitle": "Specialized medical and psychological care supports every stage of recovery, from detoxification to long-term follow-up.",
       "contact": "Free consultation"
     },
     "approach": {
-      "badge": "Our approach",
+      "badge": "Clinical approach",
       "title": "We combine medicine and specialized psychology",
-      "description": "Our treatment integrates specialized medical care with advanced psychological therapies, ensuring a complete approach to addiction at the physical, mental, and emotional levels.",
+      "description": "The treatment combines specialized medical care with advanced psychological therapies to address addiction at the physical, mental, and emotional levels.",
       "points": [
         { "title": "Comprehensive medical assessment", "text": "Complete diagnosis of the patient’s physical and mental condition" },
         { "title": "Personalized plan", "text": "Treatment tailored to each patient’s specific needs" },
@@ -72,9 +72,9 @@
       "imageAlt": "Vistacampo medical team performing a comprehensive assessment"
     },
     "goals": {
-      "badge": "Our goals",
+      "badge": "Treatment goals",
       "title": "Treatment objectives",
-      "description": "Our therapeutic program is designed to achieve comprehensive and sustainable recovery, addressing all aspects of addiction and its consequences.",
+      "description": "The therapeutic program is designed to achieve comprehensive and sustainable recovery, addressing all aspects of addiction and its consequences.",
       "cards": [
         {
           "title": "Comprehensive diagnosis",
@@ -152,7 +152,7 @@
     "stages": {
       "badge": "Recovery process",
       "title": "Treatment stages",
-      "description": "Our program is developed in structured stages to ensure progressive and sustainable recovery over time.",
+      "description": "The program unfolds in structured stages to support progressive and sustainable recovery over time.",
       "cards": [
         {
           "title": "Medical detox",
@@ -177,15 +177,15 @@
     "faq": {
       "badge": "Frequently asked questions",
       "title": "We answer your questions",
-      "description": "The most common questions about our treatment and recovery process.",
+      "description": "The most common questions about the treatment and recovery process.",
       "items": [
         {
           "q": "How long does the complete treatment take?",
-          "a": "The length of treatment varies according to each patient’s individual needs. Typically, the residential program lasts between 30 and 90 days, followed by a follow-up program that can extend for 12 months or more. Our team constantly evaluates progress to determine the optimal duration."
+          "a": "The length of treatment varies according to each patient’s individual needs. Typically, the residential program lasts between 30 and 90 days, followed by a follow-up program that can extend for 12 months or more. The team continually evaluates progress to determine the optimal duration."
         },
         {
           "q": "Is the treatment completely confidential?",
-          "a": "Absolutely. We maintain the strictest medical confidentiality. All patient information is protected by professional secrecy and is only shared with the patient’s express consent or in cases required by law. Our facilities are designed to ensure total privacy."
+          "a": "Absolutely. We maintain the strictest medical confidentiality. All patient information is protected by professional secrecy and is only shared with the patient’s express consent or in cases required by law. The facilities are designed to ensure total privacy."
         },
         {
           "q": "What types of addictions do you treat?",
@@ -193,17 +193,17 @@
         },
         {
           "q": "Can the family participate in the treatment?",
-          "a": "Yes, family participation is essential in our therapeutic approach. We offer family therapy sessions, educational programs for relatives, and support groups. We believe recovery is more effective when the whole family is involved and receives the necessary support."
+          "a": "Yes, family participation is essential in the therapeutic approach. We offer family therapy sessions, educational programs for relatives, and support groups. Recovery is more effective when the whole family is involved and receives the necessary support."
         },
         {
           "q": "What happens after discharge?",
-          "a": "Our commitment continues after discharge. We provide a personalized follow-up plan that includes regular consultations, support groups, maintenance therapy, and access to community resources. We also offer a 24/7 support line for crisis situations and a relapse prevention program."
+          "a": "After discharge, support continues with a personalized follow-up plan that includes regular consultations, support groups, maintenance therapy, and access to community resources. We also offer a 24/7 support line for crisis situations and a relapse prevention program."
         }
       ]
     },
     "cta": {
       "title": "Start your recovery process today",
-      "text": "Our specialized team is ready to design a personalized treatment plan tailored to your specific needs.",
+      "text": "The specialized team is ready to design a personalized treatment plan tailored to your specific needs.",
       "contact": "Free consultation",
       "admission": "Admission process"
     }

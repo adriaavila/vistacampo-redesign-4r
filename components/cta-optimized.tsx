@@ -53,10 +53,10 @@ export function CTAOptimized({
       case "emergency":
         return {
           bgColor: "bg-gradient-to-r from-red-600 to-red-700",
-          title: title || "¿Necesitas Ayuda Inmediata?",
+          title: title || "¿Necesitas ayuda inmediata?",
           description:
             description ||
-            "Si tú o un ser querido están en crisis, no esperes. Nuestro equipo está disponible 24/7 para emergencias.",
+            "Si tú o un ser querido están en crisis, actúa ahora. Atención confidencial 24/7 para orientar los siguientes pasos.",
           primaryAction: primaryAction || "Llamada de Emergencia",
           secondaryAction: secondaryAction || "Chat de Crisis",
           urgencyText: "Línea de crisis 24/7",
@@ -65,10 +65,10 @@ export function CTAOptimized({
       case "admission":
         return {
           bgColor: "bg-gradient-to-r from-emerald-600 to-teal-600",
-          title: title || "Comienza tu Proceso de Recuperación",
+          title: title || "Comienza tu proceso de recuperación",
           description:
             description ||
-            "Da el primer paso hacia una nueva vida. Nuestro equipo te acompañará en cada etapa del proceso.",
+            "Da el primer paso hacia una vida en equilibrio. Acompañamiento profesional desde la admisión hasta el seguimiento.",
           primaryAction: primaryAction || "Iniciar Admisión",
           secondaryAction: secondaryAction || "Consulta Gratuita",
           urgencyText: "Respuesta en 2 horas",
@@ -88,10 +88,10 @@ export function CTAOptimized({
       default:
         return {
           bgColor: "bg-gradient-to-r from-emerald-600 to-teal-600",
-          title: title || "¿Listo para Dar el Primer Paso?",
+          title: title || "¿Listo para dar el primer paso?",
           description:
             description ||
-            "Nuestro equipo especializado está aquí para ayudarte. Agenda una consulta confidencial y sin compromiso.",
+            "Agenda una consulta confidencial y recibe orientación clara sobre el tratamiento más adecuado.",
           primaryAction: primaryAction || "Agendar Consulta",
           secondaryAction: secondaryAction || "Llamar Ahora",
           urgencyText: "Consulta gratuita",

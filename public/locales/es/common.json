@@ -21,14 +21,14 @@
     "contactWhatsApp": "Contactar por WhatsApp",
     "requestHelp": "Solicita ayuda",
     "requestHelpNow": "Solicita ayuda ahora",
-    "learnMoreTreatment": "Conoce nuestro tratamiento",
-    "learnMoreAboutUs": "Conoce más sobre nosotros"
+    "learnMoreTreatment": "Conoce el tratamiento",
+    "learnMoreAboutUs": "Conoce más sobre Vistacampo"
   },
   "badges": {
     "specializedRehab": "Centro de rehabilitación especializado",
     "aboutVistacampo": "Sobre Vistacampo",
     "founderMessage": "Mensaje del fundador",
-    "ourServices": "Nuestros servicios",
+    "ourServices": "Servicios",
     "testimonials": "Testimonios"
   },
   "features": {
@@ -40,7 +40,7 @@
   },
   "cta": {
     "ready": "¿Listo para dar el primer paso?",
-    "text": "Si sientes que has pisado fondo y que llegó el momento de tomar la decisión de hacer un alto para recuperar tu vida y liberarte de la terrible dependencia al alcohol y otras drogas; si no soportas más ver a tus familiares y amigos sufrir como consecuencia de tu incontrolable consumo; entonces, cuenta con nosotros."
+    "text": "Si sientes que has llegado al límite y es momento de tomar una decisión para recuperar tu vida y salir de la dependencia al alcohol u otras drogas, aquí encontrarás un equipo preparado para acompañarte."
   },
   "lang": {
     "es": "ES",
@@ -51,19 +51,19 @@
   "treatment": {
     "meta": {
       "title": "Tratamiento de Adicciones - Programas Terapéuticos | Vistacampo",
-      "description": "Conoce nuestros programas de tratamiento integral para adicciones. Desintoxicación médica, terapia individual y grupal, seguimiento post-tratamiento en Colonia Tovar, Venezuela.",
+      "description": "Conoce los programas de tratamiento integral para adicciones. Desintoxicación médica, terapia individual y grupal, seguimiento post-tratamiento en Colonia Tovar, Venezuela.",
       "keywords": "tratamiento adicciones, desintoxicación, terapia, rehabilitación, Colonia Tovar, Venezuela"
     },
     "hero": {
       "badge": "Programas terapéuticos",
       "title": "Tratamiento integral y personalizado",
-      "subtitle": "Nuestro enfoque médico y psicológico especializado te acompañará en cada etapa de tu proceso de recuperación, desde la desintoxicación hasta el seguimiento a largo plazo.",
+      "subtitle": "El acompañamiento médico y psicológico te guía en cada etapa del proceso de recuperación, desde la desintoxicación hasta el seguimiento a largo plazo.",
       "contact": "Consulta gratuita"
     },
     "approach": {
-      "badge": "Nuestro enfoque",
+      "badge": "Enfoque clínico",
       "title": "Combinamos medicina y psicología especializada",
-      "description": "Nuestro tratamiento integra la atención médica especializada con terapias psicológicas avanzadas, asegurando un abordaje completo de la adicción tanto a nivel físico como mental y emocional.",
+      "description": "El tratamiento integra atención médica especializada con terapias psicológicas avanzadas para abordar la adicción de forma completa en los planos físico, mental y emocional.",
       "points": [
         { "title": "Evaluación médica integral", "text": "Diagnóstico completo del estado físico y mental del paciente" },
         { "title": "Plan personalizado", "text": "Tratamiento adaptado a las necesidades específicas de cada paciente" },
@@ -72,9 +72,9 @@
       "imageAlt": "Equipo médico de Vistacampo realizando evaluación integral"
     },
     "goals": {
-      "badge": "Nuestros objetivos",
+      "badge": "Objetivos del programa",
       "title": "Objetivos del tratamiento",
-      "description": "Nuestro programa terapéutico está diseñado para lograr una recuperación integral y sostenible, abordando todos los aspectos de la adicción y sus consecuencias.",
+      "description": "El programa terapéutico está diseñado para lograr una recuperación integral y sostenible, abordando todos los aspectos de la adicción y sus consecuencias.",
       "cards": [
         {
           "title": "Diagnóstico integral",
@@ -152,7 +152,7 @@
     "stages": {
       "badge": "Proceso de recuperación",
       "title": "Etapas del tratamiento",
-      "description": "Nuestro programa se desarrolla en etapas estructuradas que garantizan una recuperación progresiva y sostenible en el tiempo.",
+      "description": "El programa se desarrolla en etapas estructuradas que favorecen una recuperación progresiva y sostenible en el tiempo.",
       "cards": [
         {
           "title": "Desintoxicación médica",
@@ -177,15 +177,15 @@
     "faq": {
       "badge": "Preguntas frecuentes",
       "title": "Resolvemos tus dudas",
-      "description": "Las preguntas más comunes sobre nuestro proceso de tratamiento y recuperación.",
+      "description": "Las preguntas más comunes sobre el proceso de tratamiento y recuperación.",
       "items": [
         {
           "q": "¿Cuánto tiempo dura el tratamiento completo?",
-          "a": "La duración del tratamiento varía según las necesidades individuales de cada paciente. Típicamente, el programa residencial dura entre 30 a 90 días, seguido de un programa de seguimiento que puede extenderse por 12 meses o más. Nuestro equipo evalúa constantemente el progreso para determinar la duración óptima."
+          "a": "La duración del tratamiento varía según las necesidades individuales de cada paciente. Típicamente, el programa residencial dura entre 30 a 90 días, seguido de un programa de seguimiento que puede extenderse por 12 meses o más. El equipo evalúa constantemente el progreso para determinar la duración óptima."
         },
         {
           "q": "¿El tratamiento es completamente confidencial?",
-          "a": "Absolutamente. Mantenemos la más estricta confidencialidad médica. Toda la información del paciente está protegida por el secreto profesional y solo se comparte con el consentimiento expreso del paciente o en casos requeridos por ley. Nuestras instalaciones están diseñadas para garantizar la privacidad total."
+          "a": "Absolutamente. Mantenemos la más estricta confidencialidad médica. Toda la información del paciente está protegida por el secreto profesional y solo se comparte con el consentimiento expreso del paciente o en casos requeridos por ley. Las instalaciones están diseñadas para garantizar la privacidad total."
         },
         {
           "q": "¿Qué tipos de adicciones tratan?",
@@ -193,17 +193,17 @@
         },
         {
           "q": "¿La familia puede participar en el tratamiento?",
-          "a": "Sí, la participación familiar es fundamental en nuestro enfoque terapéutico. Ofrecemos sesiones de terapia familiar, programas educativos para familiares y grupos de apoyo. Creemos que la recuperación es más efectiva cuando toda la familia está involucrada y recibe el apoyo necesario."
+          "a": "Sí, la participación familiar es fundamental en el enfoque terapéutico. Ofrecemos sesiones de terapia familiar, programas educativos para familiares y grupos de apoyo. Creemos que la recuperación es más efectiva cuando toda la familia está involucrada y recibe el apoyo necesario."
         },
         {
           "q": "¿Qué sucede después del alta médica?",
-          "a": "Nuestro compromiso continúa después del alta. Proporcionamos un plan de seguimiento personalizado que incluye consultas regulares, grupos de apoyo, terapia de mantenimiento y acceso a recursos comunitarios. También ofrecemos línea de apoyo 24/7 para situaciones de crisis y un programa de prevención de recaídas."
+          "a": "Después del alta, el acompañamiento continúa con un plan de seguimiento personalizado que incluye consultas regulares, grupos de apoyo, terapia de mantenimiento y acceso a recursos comunitarios. También ofrecemos línea de apoyo 24/7 para situaciones de crisis y un programa de prevención de recaídas."
         }
       ]
     },
     "cta": {
       "title": "Comienza tu proceso de recuperación hoy",
-      "text": "Nuestro equipo especializado está listo para diseñar un plan de tratamiento personalizado que se adapte a tus necesidades específicas.",
+      "text": "El equipo especializado está listo para diseñar un plan de tratamiento personalizado que se adapte a tus necesidades específicas.",
       "contact": "Consulta gratuita",
       "admission": "Proceso de admisión"
     }

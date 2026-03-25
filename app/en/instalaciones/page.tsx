@@ -393,7 +393,7 @@ export default function FacilitiesPage() {
               Ready to start your recovery journey?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Our facilities are ready to welcome you. Contact us to schedule a visit and learn more about our treatment programs.
+              Schedule a visit and get clear guidance on treatment, admission, and what to expect on arrival.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">

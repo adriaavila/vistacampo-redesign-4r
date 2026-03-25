@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button"
 
 export const metadata: Metadata = {
   title: "Vistacampo - Centro de Rehabilitación de Adicciones en Colonia Tovar",
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Vistacampo" }],
   openGraph: {
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
-    description: "Tu recuperación es nuestra misión. Centro especializado en tratamiento integral de adicciones en Colonia Tovar, Venezuela.",
+    description: "Tratamiento integral y confidencial para adicciones en Colonia Tovar, Venezuela.",
     url: "https://vistacampo.com/es",
     siteName: "Vistacampo",
     locale: "es_VE",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
-    description: "Tu recuperación es nuestra misión. Centro especializado en tratamiento integral de adicciones en Colonia Tovar, Venezuela.",
+    description: "Tratamiento integral y confidencial para adicciones en Colonia Tovar, Venezuela.",
   },
   robots: {
     index: true,
@@ -36,5 +37,10 @@ export default function SpanishLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <>
+      {children}
+      <FloatingWhatsAppButton locale="es" />
+    </>
+  )
 }

@@ -62,14 +62,14 @@ export default function HomePage() {
               {t("badges.specializedRehab")}
             </Badge>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">
-              <span className="text-white">Your recovery is our</span>{" "}
+              <span className="text-white">Your recovery, in expert</span>{" "}
               <span className="bg-gradient-to-r from-emerald-300 via-emerald-400 to-emerald-500 bg-clip-text text-transparent [text-shadow:0_2px_14px_rgba(0,0,0,0.45)]">
-                mission
+                hands
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-              At Vistacampo we offer comprehensive addiction treatment in a safe, private and professional environment
-              in Colonia Tovar, Venezuela.
+              Specialized medical and psychological care in a discreet, safe, and professional setting in Colonia
+              Tovar, Venezuela.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">
@@ -124,16 +124,15 @@ export default function HomePage() {
                   Pioneers in Addiction Treatment in Venezuela
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  The Vistacampo Center is a private residential institution, a pioneer in detoxification and
-                  treatment of addictions to substances such as alcohol, cocaine, marijuana, tobacco, electronic
-                  cigarettes, prescription pills, designer drugs, and emotional eating, located in Colonia Tovar.
+                  Vistacampo is a private residential center and a pioneer in detoxification and addiction treatment for
+                  substances such as alcohol, cocaine, marijuana, tobacco, e-cigarettes, prescription pills, designer
+                  drugs, and emotional eating, based in Colonia Tovar.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  In addition, we treat addictive behaviors such as gambling, video games, cell phones, social networks,
-                  work, sex, sports, cosmetic surgeries, trauma, and dual pathology. We treat, in a highly
-                  secure and confidential environment, young people and adults whose consumption or addictive behavior is affecting their
-                  quality of life, causing immense suffering both to them and to their families and loved
-                  ones.
+                  The program also addresses addictive behaviors such as gambling, video games, cell phones, social
+                  networks, work, sex, sports, cosmetic surgery, trauma, and dual diagnosis. Care is delivered in a
+                  highly secure and confidential environment for young people and adults whose use or behavior is
+                  already affecting quality of life and placing strain on their families and loved ones.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -204,8 +203,8 @@ export default function HomePage() {
                 A story of recovery and hope
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Learn about the personal story that inspired the creation of Vistacampo and our commitment to your
-                recovery.
+                Learn about the personal story that inspired the creation of Vistacampo and the commitment behind
+                the project.
               </p>
             </div>
 
@@ -238,35 +237,34 @@ export default function HomePage() {
                     </p>
 
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      Many years have passed since then, and looking back today, I can confirm it was the best
-                      decision. Thanks to the treatment I received and the human team at the Vallés Therapeutic Center,
-                      in Catalonia, I recovered and learned to live without using and, most importantly, to live with
+                      Many years have passed since then, and looking back today, I can confirm it was the right
+                      decision. Thanks to the treatment I received and the team at the Vallés Therapeutic Center in
+                      Catalonia, I recovered and learned to live without using, and most importantly, to live with
                       dignity.
                     </p>
 
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      But the wheel of life kept turning and years later… I returned to that same town where I was
-                      discharged, to join the team and work helping others. Those years of study and
-                      training, alongside the specialists who had founded the treatment around 1984,
-                      awakened in me a great motivation and commitment to return to Venezuela to promote a
-                      pioneering center in drug addiction recovery.
+                      But life kept turning, and years later I returned to that same town where I had been discharged,
+                      joined the team, and began helping others. Those years of study and training alongside the
+                      specialists who had founded the treatment around 1984 awakened a lasting commitment to bring a
+                      pioneering recovery center to Venezuela.
                     </p>
 
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      That's how we founded the Vistacampo Therapeutic Center, together with a multidisciplinary and
-                      scientifically specialized team of doctors, psychiatrists, monitors, and therapists; with the
-                      special characteristic that many of them are recovered addicts, in the same Center.
+                      That is how Vistacampo Therapeutic Center was founded, together with a multidisciplinary and
+                      scientifically trained team of doctors, psychiatrists, monitors, and therapists, many of whom are
+                      in recovery themselves.
                     </p>
 
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      A dream has come true, and so has a commitment. We can say with humility and enthusiasm to
-                      those who are suffering for themselves or for a loved one that there is now a place in Venezuela where
-                      they can receive professional and scientifically supported treatment.
+                      A dream has come true, and so has a commitment. Today, those suffering themselves or alongside a
+                      loved one have a place in Venezuela where they can receive professional, scientifically grounded
+                      treatment.
                     </p>
 
                     <div className="bg-white p-6 rounded-lg shadow-lg border border-emerald-200 my-6">
                       <p className="text-gray-700 leading-relaxed mb-4 font-medium">
-                        You only have to take the first step and contact us at Vistacampo Center{" "}
+                        All it takes is the first step: contact Vistacampo Center{" "}
                         <a
                           href={WHATSAPP_LINK_EN}
                           target="_blank"
@@ -281,12 +279,11 @@ export default function HomePage() {
                     </div>
 
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      Here we will accompany you to embark on the path toward true recovery, with the dignity and
-                      respect we all deserve when, at some point in our lives, we lose control and, without
-                      being able to avoid it, hit rock bottom…
+                      Here, we will accompany you on the path toward real recovery, with the dignity and respect
+                      everyone deserves when life becomes unmanageable and help is needed.
                     </p>
 
-                    <p className="text-emerald-700 font-semibold text-lg">We're waiting for you.</p>
+                    <p className="text-emerald-700 font-semibold text-lg">We are here when you are ready.</p>
 
                     <div className="mt-6 pt-4 border-t border-emerald-200">
                       <p className="text-gray-600 italic">
@@ -321,7 +318,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Our Services */}
+      {/* 4. Services */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -333,8 +330,8 @@ export default function HomePage() {
                 Specialized and personalized treatment
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                We offer a comprehensive approach that combines medicine, psychology, and specialized therapies to ensure
-                a successful and lasting recovery.
+                A comprehensive approach combining medicine, psychology, and specialized therapies to support lasting
+                recovery.
               </p>
             </div>
 
@@ -439,8 +436,8 @@ export default function HomePage() {
                 Stories of recovery and hope
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                The experiences of our patients and their families are our greatest testament to the commitment and
-                effectiveness of our treatment.
+                The experiences of patients and families are the clearest proof of the commitment and effectiveness of
+                the treatment.
               </p>
             </div>
 
