@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://vistacampo-redesign-4r.vercel.app/images/og-hero.png",
+        url: "https://vistacampo-redesign-4r.vercel.app/images/og-share-bg.jpg",
         width: 1200,
         height: 630,
         alt: "Vistacampo - Addiction Rehabilitation Center",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Vistacampo - Addiction Rehabilitation Center",
     description:
       "Specialized addiction rehabilitation center in Colonia Tovar, Venezuela. We offer comprehensive medical treatment and personalized therapy for your recovery.",
-    images: ["https://vistacampo-redesign-4r.vercel.app/images/og-hero.png"],
+    images: ["https://vistacampo-redesign-4r.vercel.app/images/og-share-bg.jpg"],
   },
   robots: {
     index: true,
