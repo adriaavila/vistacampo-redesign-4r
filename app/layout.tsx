@@ -20,6 +20,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vistacampo.com"),
   title: "Vistacampo - Centro de Rehabilitación de Adicciones en Colonia Tovar",
   icons: {
     icon: "/vistacampo-favicon.png",
@@ -39,11 +40,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://vistacampo.com/opengraph-image",
+        url: "/images/og-hero.png",
         width: 1200,
         height: 630,
         alt: "Vistacampo - Centro de Rehabilitación de Adicciones en Colonia Tovar",
-        type: "image/png",
       },
     ],
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
     description:
       "Tratamiento integral y confidencial para adicciones en Colonia Tovar, Venezuela.",
-    images: ["https://vistacampo.com/opengraph-image"],
+    images: ["/images/og-hero.png"],
   },
   robots: {
     index: true,
