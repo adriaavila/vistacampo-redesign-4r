@@ -14,21 +14,12 @@ export const metadata: Metadata = {
     siteName: "Vistacampo",
     locale: "es_VE",
     type: "website",
-    images: [
-      {
-        url: "https://vistacampo-redesign-4r.vercel.app/images/og-share-bg.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Vistacampo - Centro de Rehabilitación de Adicciones en Colonia Tovar",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
     description:
       "Centro especializado en rehabilitación de adicciones en Colonia Tovar. Ofrecemos tratamiento médico integral y terapia personalizada para tu recuperación.",
-    images: ["https://vistacampo-redesign-4r.vercel.app/images/og-share-bg.jpg"],
   },
   robots: {
     index: true,
