@@ -15,12 +15,14 @@ export const metadata: Metadata = {
     siteName: "Vistacampo",
     locale: "en_US",
     type: "website",
+    images: ["/api/og"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Vistacampo - Addiction Rehabilitation Center",
     description:
       "Specialized addiction rehabilitation center in Colonia Tovar, Venezuela. We offer comprehensive medical treatment and personalized therapy for your recovery.",
+    images: ["/api/og"],
   },
   robots: {
     index: true,
