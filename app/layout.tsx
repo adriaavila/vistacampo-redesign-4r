@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
     description:
       "Tratamiento integral y confidencial para adicciones en Colonia Tovar, Venezuela.",
-    url: "https://vistacampo.com",
     siteName: "Vistacampo",
     locale: "es_VE",
     type: "website",

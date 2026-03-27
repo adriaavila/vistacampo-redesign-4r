@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vistacampo - Addiction Rehabilitation Center",
     description: "Comprehensive and confidential addiction treatment in Colonia Tovar, Venezuela.",
-    url: "https://vistacampo.com/en",
     siteName: "Vistacampo",
     locale: "en_US",
     type: "website",
