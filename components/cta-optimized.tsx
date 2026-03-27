@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { MessageCircle, Calendar, ArrowRight, Clock, Shield, Heart, X } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
+import { WhatsAppCtaIcon } from "./whatsapp-cta-icon"
 import { WHATSAPP_LINK } from "@/lib/constants"
 
 interface CTAOptimizedProps {
@@ -141,7 +142,7 @@ export function CTAOptimized({
                         : "bg-white text-emerald-600 hover:bg-gray-100"
                     }
                   >
-                    <WhatsAppIcon className="mr-1 h-3 w-3" />
+                    <WhatsAppCtaIcon tone={config.textColor ? "contrast" : "brand"} size="sm" />
                     {config.primaryAction}
                   </Button>
                   <Button
@@ -153,7 +154,7 @@ export function CTAOptimized({
                         : "border-white text-white hover:bg-white hover:text-emerald-600"
                     }
                   >
-                    <WhatsAppIcon className="mr-1 h-3 w-3" />
+                    <WhatsAppCtaIcon tone={config.textColor ? "brand" : "contrast"} size="sm" />
                     {config.secondaryAction}
                   </Button>
                 </div>
@@ -189,7 +190,7 @@ export function CTAOptimized({
                 variant="secondary"
                 className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
               >
-                <config.icon className="mr-2 h-5 w-5" color="#10b981" />
+                <WhatsAppCtaIcon tone="brand" />
                 {config.primaryAction}
               </Button>
               <Button
@@ -197,7 +198,7 @@ export function CTAOptimized({
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-emerald-600 text-lg px-8 py-4"
               >
-                <WhatsAppIcon className="mr-2 h-5 w-5" />
+                <WhatsAppCtaIcon tone="contrast" />
                 {config.secondaryAction}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

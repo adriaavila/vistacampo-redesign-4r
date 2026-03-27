@@ -8,14 +8,38 @@ import { Heart, Shield, Users, MessageCircle, Star, ArrowRight, CheckCircle } fr
 import Image from "next/image"
 import Link from "next/link"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WhatsAppCtaIcon } from "@/components/whatsapp-cta-icon"
 import { WHATSAPP_LINK_EN } from "@/lib/constants"
 import { TypingText } from "@/components/TypingText"
 import { useTranslation } from "react-i18next"
 import { initI18next } from "@/app/i18n"
+import { HomeHeroCarousel } from "@/components/home-hero-carousel"
 
 export default function HomePage() {
   const { t, i18n } = useTranslation("common");
   const [isReady, setIsReady] = useState(false);
+  const heroSlides = [
+    {
+      src: "/images/hero-1.png",
+      alt: "Main exterior view of Vistacampo surrounded by nature under a clear blue sky",
+      label: "Residential setting and privacy",
+    },
+    {
+      src: "/images/hero-2.png",
+      alt: "Outdoor therapeutic group session guided by the Vistacampo team",
+      label: "Meaningful therapeutic experiences",
+    },
+    {
+      src: "/images/hero-3.png",
+      alt: "Gardens and hillside access to the Vistacampo facilities in Colonia Tovar",
+      label: "Nature, calm, and recovery",
+    },
+    {
+      src: "/images/vc-panoramica.webp",
+      alt: "Panoramic view of Vistacampo and its natural surroundings in Colonia Tovar",
+      label: "Panoramic view of the Vistacampo setting",
+    },
+  ];
 
   useEffect(() => {
     const initializeI18n = async () => {
@@ -40,23 +64,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* 1. Specialized Rehabilitation Center - Hero Section */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50 overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/vc-hero-bg.png"
-            alt="Vistacampo panoramic view"
-            fill
-            priority
-            quality={95}
-            sizes="100vw"
-            className="object-cover object-[56%_center] md:object-center w-full h-full"
-          />
-        </div>
-
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent z-10" />
-        <div className="container mx-auto px-4 relative z-20">
+      <HomeHeroCarousel slides={heroSlides}>
           <div className="max-w-4xl mx-auto text-center space-y-8 text-white">
             <Badge variant="secondary" className="mb-4 text-rose-100 bg-rose-900/40">
               {t("badges.specializedRehab")}
@@ -77,7 +85,7 @@ export default function HomePage() {
                   size="lg"
                   className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
+                  <WhatsAppCtaIcon tone="contrast" />
                   <span className="block sm:hidden">{t("actions.requestHelp")}</span>
                   <span className="hidden sm:inline">{t("actions.requestHelpNow")}</span>
                 </Button>
@@ -108,8 +116,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </HomeHeroCarousel>
 
       {/* 2. About Us */}
       <section className="py-20 bg-gray-50">
@@ -298,7 +305,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer" className="flex-1">
                     <Button className="bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 w-full">
-                      <WhatsAppIcon className="mr-2 h-4 w-4" color="#10b981" />
+                      <WhatsAppCtaIcon tone="contrast" size="sm" />
                       {t("actions.contactWhatsApp")}
                     </Button>
                   </a>
@@ -531,7 +538,7 @@ export default function HomePage() {
                     variant="secondary"
                     className="w-full sm:w-auto bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
                   >
-                    <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
+                    <WhatsAppCtaIcon tone="brand" />
                     {t("actions.contactWhatsApp")}
                   </Button>
                 </a>

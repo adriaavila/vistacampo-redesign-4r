@@ -179,16 +179,32 @@ export default function EquipoPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50">
-        <div className="container mx-auto px-4">
+      <section className="relative overflow-hidden py-20">
+        {/* Background photo */}
+        <div aria-hidden="true" className="absolute inset-0">
+          <Image
+            src="/images/equipo-vistacampo.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Readability overlays — same treatment as tratamiento */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9),rgba(255,255,255,0.58)_28%,rgba(255,255,255,0.18)_56%,transparent_82%),radial-gradient(circle_at_top_left,rgba(16,185,129,0.14),transparent_28%),radial-gradient(circle_at_top_right,rgba(56,189,248,0.14),transparent_26%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.18),rgba(255,255,255,0.06)_24%,rgba(255,255,255,0.04)_76%,rgba(255,255,255,0.14))]" />
+          <div className="absolute inset-0 bg-white/[0.03] backdrop-blur-[1.5px]" />
+        </div>
+
+        <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Nuestro equipo
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6 drop-shadow-[0_2px_18px_rgba(255,255,255,0.92)]">
               Conoce a nuestro equipo especializado
             </h1>
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed drop-shadow-[0_1px_12px_rgba(255,255,255,0.88)]">
               Nuestro equipo multidisciplinario de profesionales está comprometido con brindar la más alta calidad de atención y apoyo
               para tu proceso de recuperación.
             </p>

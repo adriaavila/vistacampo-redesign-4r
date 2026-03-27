@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { MessageCircle, Mail, MapPin, Clock, Send, Shield, Heart } from "lucide-react"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WhatsAppCtaIcon } from "@/components/whatsapp-cta-icon"
 import { WHATSAPP_LINK_EN } from "@/lib/constants"
 
 export default function ContactPage() {
@@ -301,7 +302,7 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
+                  <WhatsAppCtaIcon tone="brand" />
                   Contact via WhatsApp
                 </Button>
               </a>

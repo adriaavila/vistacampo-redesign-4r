@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Facebook, Instagram, Heart } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
+import { WhatsAppCtaIcon } from "./whatsapp-cta-icon"
 import { WHATSAPP_LINK, WHATSAPP_LINK_EN } from "@/lib/constants"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
@@ -113,7 +114,7 @@ export function Footer() {
             <div className="pt-4">
               <a href={isEn ? WHATSAPP_LINK_EN : WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
-                  <WhatsAppIcon className="mr-2 h-4 w-4" color="#10b981" />
+                  <WhatsAppCtaIcon tone="contrast" size="sm" />
                   {isEn ? "Request help 24/7" : "Solicita ayuda 24/7"}
                 </Button>
               </a>

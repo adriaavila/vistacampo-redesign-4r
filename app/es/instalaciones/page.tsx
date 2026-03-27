@@ -33,8 +33,9 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WhatsAppCtaIcon } from "@/components/whatsapp-cta-icon"
 import { WHATSAPP_LINK } from "@/lib/constants"
+import { TreatmentHeroCollage } from "@/components/treatment-hero-collage"
 
 const instalacionesData = {
   habitaciones: [
@@ -42,7 +43,7 @@ const instalacionesData = {
       id: 1,
       titulo: "Habitación individual premium",
       descripcion: "Espacios privados y cómodos diseñados para el descanso y la reflexión personal.",
-      imagen: "/images/vc-cuarto-cama-sola.jpeg",
+      imagen: "/images/habitacion-individual-premium.png",
       caracteristicas: ["Baño privado", "Aire acondicionado", "Escritorio", "Armario amplio", "Vista al jardín"],
     },
     {
@@ -62,7 +63,7 @@ const instalacionesData = {
       id: 3,
       titulo: "Suite de recuperación",
       descripcion: "Espacios especiales para pacientes en etapas avanzadas de recuperación.",
-      imagen: "/images/vc-dos-camas.jpeg",
+      imagen: "/images/suite-recuperacion.png",
       caracteristicas: ["Sala de estar", "Kitchenette", "Baño completo", "Balcón privado", "Mobiliario premium"],
     },
   ],
@@ -71,7 +72,7 @@ const instalacionesData = {
       id: 4,
       titulo: "Sala de terapia grupal",
       descripcion: "Espacios acogedores diseñados para facilitar la comunicación y el trabajo en equipo.",
-      imagen: "/images/vc-terapia.jpeg",
+      imagen: "/images/vc-sala-terapia-grupal.jpg",
       caracteristicas: [
         "Círculo de asientos",
         "Iluminación natural",
@@ -143,8 +144,19 @@ export default function InstalacionesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50">
-        <div className="container mx-auto px-4">
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50 py-20">
+        <TreatmentHeroCollage images={[
+          "/images/vc-instalaciones.jpeg",
+          "/images/habitacion-individual-premium.png",
+          "/images/vc-sala-terapia-grupal.jpg",
+          "/images/vc-vista.jpeg",
+          "/images/vc-comedor.jpeg",
+          "/images/suite-recuperacion.png",
+          "/images/areaDeportivaVC.jpeg",
+          "/images/vc-sala-cala.jpeg",
+          "/images/vc-panoramica.webp",
+        ]} />
+        <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Nuestras instalaciones
@@ -158,7 +170,7 @@ export default function InstalacionesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
+                  <WhatsAppCtaIcon tone="contrast" />
                   Agendar visita
                 </Button>
               </a>
@@ -394,7 +406,7 @@ export default function InstalacionesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
+                  <WhatsAppCtaIcon tone="brand" />
                   Agendar visita
                 </Button>
               </a>

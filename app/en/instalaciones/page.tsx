@@ -33,9 +33,10 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { WhatsAppIcon } from "@/components/whatsapp-icon"
+import { WhatsAppCtaIcon } from "@/components/whatsapp-cta-icon"
 import { WHATSAPP_LINK_EN } from "@/lib/constants"
 import { useTranslation } from "react-i18next"
+import { TreatmentHeroCollage } from "@/components/treatment-hero-collage"
 
 const facilitiesData = {
   rooms: [
@@ -72,7 +73,7 @@ const facilitiesData = {
       id: 4,
       title: "Group therapy room",
       description: "Welcoming spaces designed to facilitate communication and teamwork.",
-      image: "/images/vc-terapia.jpeg",
+      image: "/images/vc-sala-terapia-grupal.jpg",
       features: [
         "Circle of seats",
         "Natural lighting",
@@ -145,8 +146,19 @@ export default function FacilitiesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50">
-        <div className="container mx-auto px-4">
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50 py-20">
+        <TreatmentHeroCollage images={[
+          "/images/vc-instalaciones.jpeg",
+          "/images/habitacion-individual-premium.png",
+          "/images/vc-sala-terapia-grupal.jpg",
+          "/images/vc-vista.jpeg",
+          "/images/vc-comedor.jpeg",
+          "/images/suite-recuperacion.png",
+          "/images/areaDeportivaVC.jpeg",
+          "/images/vc-sala-cala.jpeg",
+          "/images/vc-panoramica.webp",
+        ]} />
+        <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
               Our facilities
@@ -160,7 +172,7 @@ export default function FacilitiesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
+                  <WhatsAppCtaIcon tone="contrast" />
                   Schedule a visit
                 </Button>
               </a>
@@ -398,7 +410,7 @@ export default function FacilitiesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" color="#10b981" />
+                  <WhatsAppCtaIcon tone="brand" />
                   Schedule a visit
                 </Button>
               </a>

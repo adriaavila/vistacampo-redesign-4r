@@ -1,0 +1,414 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Vistacampo - Centro Terapéutico" [ref=e6] [cursor=pointer]:
+        - /url: /es/
+        - img "Vistacampo - Centro Terapéutico" [ref=e7]
+      - navigation [ref=e8]:
+        - link "Inicio" [ref=e9] [cursor=pointer]:
+          - /url: /es/
+        - link "Tratamiento" [ref=e10] [cursor=pointer]:
+          - /url: /es/tratamiento/
+        - link "Instalaciones" [ref=e11] [cursor=pointer]:
+          - /url: /es/instalaciones/
+        - link "Equipo" [ref=e12] [cursor=pointer]:
+          - /url: /es/equipo/
+        - link "Noticias" [ref=e13] [cursor=pointer]:
+          - /url: /es/noticias/
+        - link "Contacto" [ref=e14] [cursor=pointer]:
+          - /url: /es/contacto/
+      - generic [ref=e15]:
+        - generic [ref=e17]:
+          - link "ES" [ref=e18] [cursor=pointer]:
+            - /url: /es/tratamiento/
+          - link "EN" [ref=e19] [cursor=pointer]:
+            - /url: /en/tratamiento/
+        - generic [ref=e20]:
+          - link "Visita nuestra página de Facebook" [ref=e21] [cursor=pointer]:
+            - /url: https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#
+            - img [ref=e22]
+          - link "Visita nuestro perfil de Instagram" [ref=e24] [cursor=pointer]:
+            - /url: https://www.instagram.com/centro_vistacampo/?hl=es
+            - img [ref=e25]
+          - link "Visita nuestro canal de YouTube" [ref=e28] [cursor=pointer]:
+            - /url: https://www.youtube.com/@juliogonzalezfilesari0
+            - img [ref=e29]
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e54]:
+        - generic [ref=e55]: Programas terapéuticos
+        - heading "Tratamiento integral y personalizado" [level=1] [ref=e56]
+        - paragraph [ref=e57]: El acompañamiento médico y psicológico te guía en cada etapa del proceso de recuperación, desde la desintoxicación hasta el seguimiento a largo plazo.
+        - link "Consulta gratuita" [ref=e59] [cursor=pointer]:
+          - /url: https://wa.me/584122315968?text=Gracias%20por%20comunicarte%20con%20Centro%20Vistacampo.%20%C2%BFC%C3%B3mo%20podemos%20ayudarte?
+          - button "Consulta gratuita" [ref=e60]:
+            - img
+            - text: Consulta gratuita
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e66]: Enfoque clínico
+          - heading "Combinamos medicina y psicología especializada" [level=2] [ref=e67]
+          - paragraph [ref=e68]: El tratamiento integra atención médica especializada con terapias psicológicas avanzadas para abordar la adicción de forma completa en los planos físico, mental y emocional.
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - img [ref=e71]
+              - generic [ref=e74]:
+                - heading "Evaluación médica integral" [level=3] [ref=e75]
+                - paragraph [ref=e76]: Diagnóstico completo del estado físico y mental del paciente
+            - generic [ref=e77]:
+              - img [ref=e78]
+              - generic [ref=e81]:
+                - heading "Plan personalizado" [level=3] [ref=e82]
+                - paragraph [ref=e83]: Tratamiento adaptado a las necesidades específicas de cada paciente
+            - generic [ref=e84]:
+              - img [ref=e85]
+              - generic [ref=e88]:
+                - heading "Supervisión 24/7" [level=3] [ref=e89]
+                - paragraph [ref=e90]: Monitoreo médico continuo durante todo el proceso
+        - img "Equipo médico de Vistacampo realizando evaluación integral" [ref=e92]
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e97]: Proceso estructurado
+          - heading "Fases del tratamiento" [level=2] [ref=e98]
+          - paragraph [ref=e99]: La duración del ingreso dependerá de la evolución y adaptación del paciente. A título orientativo, la mayoría de los pacientes completan un programa de 16 a 20 semanas, cumpliendo las 4 fases fundamentales.
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - generic [ref=e104]: "1"
+                - generic [ref=e105]:
+                  - heading "Desintoxicación" [level=3] [ref=e106]
+                  - paragraph [ref=e107]: Primeros 15-20 días
+              - generic [ref=e108]:
+                - paragraph [ref=e109]: Comienza a partir del día del ingreso hasta los primeros quince a veinte días. En este período se realiza una intervención centrada en la desintoxicación física en estricta observación del equipo médico.
+                - generic [ref=e110]:
+                  - generic [ref=e111]:
+                    - img [ref=e112]
+                    - generic [ref=e115]: Soporte farmacológico según necesidad médica
+                  - generic [ref=e116]:
+                    - img [ref=e117]
+                    - generic [ref=e120]: Diagnósticos para detectar trastornos paralelos
+                  - generic [ref=e121]:
+                    - img [ref=e122]
+                    - generic [ref=e125]: Descanso, alimentación equilibrada y reconciliación del sueño
+                  - generic [ref=e126]:
+                    - img [ref=e127]
+                    - generic [ref=e130]: Rutina inicial de ejercicios y terapias individuales y grupales
+            - generic [ref=e132]:
+              - generic [ref=e133]:
+                - img "Pacientes realizando ejercicios supervisados al aire libre durante la fase de desintoxicacion en Vistacampo" [ref=e137]
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "Sesion grupal al aire libre durante la fase de desintoxicacion en Vistacampo"
+              - generic [ref=e138]:
+                - generic [ref=e139]: Ejercicio fisico supervisado
+                - generic [ref=e140]:
+                  - button "Ejercicio fisico supervisado" [ref=e141] [cursor=pointer]
+                  - button "Sesion grupal en jardines" [ref=e142] [cursor=pointer]
+              - generic:
+                - button "Imagen anterior de desintoxicacion" [ref=e143] [cursor=pointer]:
+                  - img [ref=e144]
+                - button "Siguiente imagen de desintoxicacion" [ref=e146] [cursor=pointer]:
+                  - img [ref=e147]
+          - generic [ref=e149]:
+            - generic [ref=e151]:
+              - generic [ref=e152]:
+                - img "Sesion de movimiento y activacion fisica durante la fase de deshabituacion en Vistacampo" [ref=e156]
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "Espacio de reflexion al aire libre durante la fase de deshabituacion en Vistacampo"
+              - generic [ref=e157]:
+                - generic [ref=e158]: Movimiento guiado en grupo
+                - generic [ref=e159]:
+                  - button "Movimiento guiado en grupo" [ref=e160] [cursor=pointer]
+                  - button "Reflexion al aire libre" [ref=e161] [cursor=pointer]
+              - generic:
+                - button "Imagen anterior de deshabituacion" [ref=e162] [cursor=pointer]:
+                  - img [ref=e163]
+                - button "Siguiente imagen de deshabituacion" [ref=e165] [cursor=pointer]:
+                  - img [ref=e166]
+            - generic [ref=e168]:
+              - generic [ref=e169]:
+                - generic [ref=e170]: "2"
+                - generic [ref=e171]:
+                  - heading "Deshabituación" [level=3] [ref=e172]
+                  - paragraph [ref=e173]: Cambio de hábitos y conductas
+              - generic [ref=e174]:
+                - paragraph [ref=e175]: Los años de consumo y la adicción alteran la vida normal de las personas, interrumpen su proceso de crecimiento y madurez, llevando al adicto a hábitos, conductas, patrones y creencias equivocadas.
+                - generic [ref=e176]:
+                  - generic [ref=e177]:
+                    - img [ref=e178]
+                    - generic [ref=e181]: Identificación de hábitos y actitudes negativas
+                  - generic [ref=e182]:
+                    - img [ref=e183]
+                    - generic [ref=e186]: Sustitución por nueva estructura de vida
+                  - generic [ref=e187]:
+                    - img [ref=e188]
+                    - generic [ref=e191]: Mejora de relaciones consigo mismo y familia
+                  - generic [ref=e192]:
+                    - img [ref=e193]
+                    - generic [ref=e196]: Desarrollo del proyecto de vida personal
+          - generic [ref=e197]:
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - generic [ref=e200]: "3"
+                - generic [ref=e201]:
+                  - heading "Rehabilitación" [level=3] [ref=e202]
+                  - paragraph [ref=e203]: Crecimiento personal y desarrollo de habilidades
+              - generic [ref=e204]:
+                - paragraph [ref=e205]: Consiste en continuar el proceso de crecimiento personal y desarrollar las habilidades que el paciente interrumpió debido al consumo de drogas.
+                - generic [ref=e206]:
+                  - generic [ref=e207]:
+                    - img [ref=e208]
+                    - generic [ref=e211]: Terapias de grupo e individuales intensivas
+                  - generic [ref=e212]:
+                    - img [ref=e213]
+                    - generic [ref=e216]: Arte terapia, yoga y ejercicios físicos
+                  - generic [ref=e217]:
+                    - img [ref=e218]
+                    - generic [ref=e221]: Técnicas de relajación y control de impulsos
+                  - generic [ref=e222]:
+                    - img [ref=e223]
+                    - generic [ref=e226]: Recuperación de autoestima y dignidad personal
+            - generic [ref=e228]:
+              - generic [ref=e229]:
+                - img "Sesion guiada de meditacion y atencion plena durante la fase de rehabilitacion en Vistacampo" [ref=e233]
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "Actividad grupal al aire libre durante la fase de rehabilitacion en Vistacampo"
+              - generic [ref=e234]:
+                - generic [ref=e235]: Meditacion y atencion plena
+                - generic [ref=e236]:
+                  - button "Meditacion y atencion plena" [ref=e237] [cursor=pointer]
+                  - button "Actividad grupal al aire libre" [ref=e238] [cursor=pointer]
+              - generic:
+                - button "Imagen anterior de rehabilitacion" [ref=e239] [cursor=pointer]:
+                  - img [ref=e240]
+                - button "Siguiente imagen de rehabilitacion" [ref=e242] [cursor=pointer]:
+                  - img [ref=e243]
+          - generic [ref=e245]:
+            - generic [ref=e247]:
+              - generic [ref=e248]:
+                - img "Aprendizaje de oficio y practica laboral durante la fase de reinsercion en Vistacampo" [ref=e252]
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "Trabajo colaborativo al aire libre durante la fase de reinsercion en Vistacampo"
+              - generic [ref=e253]:
+                - generic [ref=e254]: Practica laboral supervisada
+                - generic [ref=e255]:
+                  - button "Practica laboral supervisada" [ref=e256] [cursor=pointer]
+                  - button "Trabajo colaborativo al aire libre" [ref=e257] [cursor=pointer]
+              - generic:
+                - button "Imagen anterior de reinsercion" [ref=e258] [cursor=pointer]:
+                  - img [ref=e259]
+                - button "Siguiente imagen de reinsercion" [ref=e261] [cursor=pointer]:
+                  - img [ref=e262]
+            - generic [ref=e264]:
+              - generic [ref=e265]:
+                - generic [ref=e266]: "4"
+                - generic [ref=e267]:
+                  - heading "Reinserción" [level=3] [ref=e268]
+                  - paragraph [ref=e269]: Preparación para la vida normal
+              - generic [ref=e270]:
+                - paragraph [ref=e271]: Durante el ingreso y principalmente en las últimas semanas del tratamiento, al paciente se le prepara para su reinserción en el entorno familiar, social y laboral.
+                - generic [ref=e272]:
+                  - generic [ref=e273]:
+                    - img [ref=e274]
+                    - generic [ref=e277]: Preparación gradual para la vida normal
+                  - generic [ref=e278]:
+                    - img [ref=e279]
+                    - generic [ref=e282]: Alcanzar el nivel de calidad de vida perdido
+                  - generic [ref=e283]:
+                    - img [ref=e284]
+                    - generic [ref=e287]: Asesoría y orientación post-alta por 2-5 años
+                  - generic [ref=e288]:
+                    - img [ref=e289]
+                    - generic [ref=e292]: Reducción de riesgos de recaída
+      - generic [ref=e295]:
+        - generic [ref=e296]:
+          - generic [ref=e297]: Objetivos del programa
+          - heading "Objetivos del tratamiento" [level=2] [ref=e298]
+          - paragraph [ref=e299]: El programa terapéutico está diseñado para lograr una recuperación integral y sostenible, abordando todos los aspectos de la adicción y sus consecuencias.
+        - generic [ref=e300]:
+          - generic [ref=e301]:
+            - generic [ref=e302]:
+              - generic [ref=e304]: "1"
+              - generic [ref=e305]: Diagnóstico integral
+            - paragraph [ref=e307]: Identificar y diagnosticar correctamente el grado de dependencia del paciente a las drogas, incluidos los fármacos, sus posibles complicaciones, alteraciones orgánicas y psicológicas.
+          - generic [ref=e308]:
+            - generic [ref=e309]:
+              - generic [ref=e311]: "2"
+              - generic [ref=e312]: Estrategias terapéuticas
+            - paragraph [ref=e314]: Desarrollar estrategias terapéuticas efectivas para acompañar al paciente durante el tratamiento, transmitiendo conciencia de su enfermedad, alejándose del consumo y enseñándole a vivir con dignidad.
+          - generic [ref=e315]:
+            - generic [ref=e316]:
+              - generic [ref=e318]: "3"
+              - generic [ref=e319]: Reinserción integral
+            - paragraph [ref=e321]: Conseguir la gradual reinserción familiar, social y profesional del paciente hasta alcanzar la normalidad en todos los aspectos que circundan su vida, de manera plena y satisfactoria.
+          - generic [ref=e322]:
+            - generic [ref=e323]:
+              - generic [ref=e325]: "4"
+              - generic [ref=e326]: Apoyo familiar
+            - paragraph [ref=e328]: Lograr que los familiares y las parejas conozcan y comprendan la adicción, involucrándose activamente en el proceso de recuperación y ayudándoles a tratar su propia coadicción.
+      - generic [ref=e331]:
+        - generic [ref=e332]:
+          - generic [ref=e333]: Proceso de recuperación
+          - heading "Etapas del tratamiento" [level=2] [ref=e334]
+          - paragraph [ref=e335]: El programa se desarrolla en etapas estructuradas que favorecen una recuperación progresiva y sostenible en el tiempo.
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - generic [ref=e339]: "1"
+            - generic [ref=e340]:
+              - img [ref=e342]
+              - generic [ref=e344]: Desintoxicación médica
+            - generic [ref=e345]:
+              - generic [ref=e346]: Proceso supervisado médicamente para eliminar las sustancias del organismo de forma segura.
+              - generic [ref=e347]:
+                - generic [ref=e348]:
+                  - img [ref=e349]
+                  - generic [ref=e352]: "Duración: 7-14 días"
+                - generic [ref=e353]:
+                  - img [ref=e354]
+                  - generic [ref=e359]: Supervisión médica 24/7
+          - generic [ref=e360]:
+            - generic [ref=e362]: "2"
+            - generic [ref=e363]:
+              - img [ref=e365]
+              - generic [ref=e367]: Terapia intensiva
+            - generic [ref=e368]:
+              - generic [ref=e369]: Combinación de terapia individual, grupal y familiar para abordar las causas profundas de la adicción.
+              - generic [ref=e370]:
+                - generic [ref=e371]:
+                  - img [ref=e372]
+                  - generic [ref=e375]: "Duración: 30-90 días"
+                - generic [ref=e376]:
+                  - img [ref=e377]
+                  - generic [ref=e382]: Sesiones diarias
+          - generic [ref=e383]:
+            - generic [ref=e385]: "3"
+            - generic [ref=e386]:
+              - img [ref=e388]
+              - generic [ref=e391]: Seguimiento continuo
+            - generic [ref=e392]:
+              - generic [ref=e393]: Acompañamiento a largo plazo para mantener la sobriedad y prevenir recaídas.
+              - generic [ref=e394]:
+                - generic [ref=e395]:
+                  - img [ref=e396]
+                  - generic [ref=e399]: "Duración: 12+ meses"
+                - generic [ref=e400]:
+                  - img [ref=e401]
+                  - generic [ref=e406]: Consultas regulares
+      - generic [ref=e409]:
+        - generic [ref=e410]:
+          - generic [ref=e411]: Preguntas frecuentes
+          - heading "Resolvemos tus dudas" [level=2] [ref=e412]
+          - paragraph [ref=e413]: Las preguntas más comunes sobre el proceso de tratamiento y recuperación.
+        - generic [ref=e414]:
+          - heading "¿Cuánto tiempo dura el tratamiento completo?" [level=3] [ref=e416]:
+            - button "¿Cuánto tiempo dura el tratamiento completo?" [ref=e417] [cursor=pointer]:
+              - text: ¿Cuánto tiempo dura el tratamiento completo?
+              - img [ref=e418]
+          - heading "¿El tratamiento es completamente confidencial?" [level=3] [ref=e421]:
+            - button "¿El tratamiento es completamente confidencial?" [ref=e422] [cursor=pointer]:
+              - text: ¿El tratamiento es completamente confidencial?
+              - img [ref=e423]
+          - heading "¿Qué tipos de adicciones tratan?" [level=3] [ref=e426]:
+            - button "¿Qué tipos de adicciones tratan?" [ref=e427] [cursor=pointer]:
+              - text: ¿Qué tipos de adicciones tratan?
+              - img [ref=e428]
+          - heading "¿La familia puede participar en el tratamiento?" [level=3] [ref=e431]:
+            - button "¿La familia puede participar en el tratamiento?" [ref=e432] [cursor=pointer]:
+              - text: ¿La familia puede participar en el tratamiento?
+              - img [ref=e433]
+          - heading "¿Qué sucede después del alta médica?" [level=3] [ref=e436]:
+            - button "¿Qué sucede después del alta médica?" [ref=e437] [cursor=pointer]:
+              - text: ¿Qué sucede después del alta médica?
+              - img [ref=e438]
+      - generic [ref=e442]:
+        - heading "Comienza tu proceso de recuperación hoy" [level=2] [ref=e443]
+        - paragraph [ref=e444]: El equipo especializado está listo para diseñar un plan de tratamiento personalizado que se adapte a tus necesidades específicas.
+        - link "Consulta gratuita" [ref=e446] [cursor=pointer]:
+          - /url: https://wa.me/584122315968?text=Gracias%20por%20comunicarte%20con%20Centro%20Vistacampo.%20%C2%BFC%C3%B3mo%20podemos%20ayudarte?
+          - button "Consulta gratuita" [ref=e447]:
+            - generic [ref=e448]:
+              - img
+            - text: Consulta gratuita
+    - link "Solicita ayuda por WhatsApp" [ref=e449] [cursor=pointer]:
+      - /url: https://wa.me/584122315968?text=Gracias%20por%20comunicarte%20con%20Centro%20Vistacampo.%20%C2%BFC%C3%B3mo%20podemos%20ayudarte?
+      - img [ref=e450]
+  - contentinfo [ref=e452]:
+    - generic [ref=e453]:
+      - generic [ref=e454]:
+        - generic [ref=e455]:
+          - generic [ref=e457]: Vistacampo
+          - paragraph [ref=e458]: Tratamiento integral y confidencial para adicciones en Colonia Tovar, Venezuela. Atención profesional para empezar a recuperar el control.
+          - generic [ref=e459]:
+            - link "Visita nuestra página de Facebook" [ref=e460] [cursor=pointer]:
+              - /url: https://www.facebook.com/people/CENTRO-TERAPEUTICO-VISTACAMPO/100064706529329/#
+              - img [ref=e461]
+            - link "Visita nuestro perfil de Instagram" [ref=e463] [cursor=pointer]:
+              - /url: https://www.instagram.com/centro_vistacampo/?hl=es
+              - img [ref=e464]
+            - link "Visita nuestro canal de YouTube" [ref=e467] [cursor=pointer]:
+              - /url: https://www.youtube.com/@juliogonzalezfilesari0
+              - img [ref=e468]
+        - generic [ref=e470]:
+          - heading "Enlaces rápidos" [level=3] [ref=e471]
+          - list [ref=e472]:
+            - listitem [ref=e473]:
+              - link "Tratamiento" [ref=e474] [cursor=pointer]:
+                - /url: /es/tratamiento/
+            - listitem [ref=e475]:
+              - link "Instalaciones" [ref=e476] [cursor=pointer]:
+                - /url: /es/instalaciones/
+            - listitem [ref=e477]:
+              - link "Nuestro equipo" [ref=e478] [cursor=pointer]:
+                - /url: /es/equipo/
+            - listitem [ref=e479]:
+              - link "Noticias" [ref=e480] [cursor=pointer]:
+                - /url: /es/noticias/
+        - generic [ref=e481]:
+          - heading "Servicios" [level=3] [ref=e482]
+          - list [ref=e483]:
+            - listitem [ref=e484]: Desintoxicación médica
+            - listitem [ref=e485]: Terapia individual
+            - listitem [ref=e486]: Terapia grupal
+            - listitem [ref=e487]: Terapia familiar
+            - listitem [ref=e488]: Seguimiento post-tratamiento
+        - generic [ref=e489]:
+          - heading "Contacto" [level=3] [ref=e490]
+          - generic [ref=e491]:
+            - link "(+58) 412-231-5968" [ref=e493] [cursor=pointer]:
+              - /url: https://wa.me/584122315968?text=Gracias%20por%20comunicarte%20con%20Centro%20Vistacampo.%20%C2%BFC%C3%B3mo%20podemos%20ayudarte?
+              - img [ref=e494]
+              - generic [ref=e496]: (+58) 412-231-5968
+            - generic [ref=e497]:
+              - img [ref=e498]
+              - generic [ref=e501]: info@vistacampo.com
+            - generic [ref=e502]:
+              - img [ref=e503]
+              - generic [ref=e506]: Colonia Tovar, Venezuela
+          - link "Solicita ayuda 24/7" [ref=e508] [cursor=pointer]:
+            - /url: https://wa.me/584122315968?text=Gracias%20por%20comunicarte%20con%20Centro%20Vistacampo.%20%C2%BFC%C3%B3mo%20podemos%20ayudarte?
+            - button "Solicita ayuda 24/7" [ref=e509]:
+              - generic [ref=e510]:
+                - img
+              - text: Solicita ayuda 24/7
+      - generic [ref=e512]:
+        - generic [ref=e513]:
+          - paragraph [ref=e514]: © 2026 Vistacampo. Todos los derechos reservados.
+          - generic [ref=e515]:
+            - link "Términos y condiciones" [ref=e516] [cursor=pointer]:
+              - /url: /es/terminos/
+            - generic [ref=e517]: "|"
+            - link "Política de privacidad" [ref=e518] [cursor=pointer]:
+              - /url: /es/privacidad/
+        - generic [ref=e519]:
+          - generic [ref=e520]: Hecho con
+          - img [ref=e521]
+          - generic [ref=e523]: para tu recuperación
