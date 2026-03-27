@@ -4,13 +4,14 @@ import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button"
 export const metadata: Metadata = {
   title: "Vistacampo - Addiction Rehabilitation Center in Colonia Tovar",
   description:
-    "Specialized center for addiction treatment in Colonia Tovar, Venezuela. Medical detox, individual therapy, and group therapy in a safe and confidential setting.",
+    "Specialized addiction rehabilitation center in Colonia Tovar, Venezuela. We offer comprehensive medical treatment and personalized therapy for your recovery.",
   keywords:
     "addiction rehabilitation, detox, therapy, Colonia Tovar, Venezuela, treatment, recovery center",
   authors: [{ name: "Vistacampo" }],
   openGraph: {
     title: "Vistacampo - Addiction Rehabilitation Center",
-    description: "Comprehensive and confidential addiction treatment in Colonia Tovar, Venezuela.",
+    description:
+      "Specialized addiction rehabilitation center in Colonia Tovar, Venezuela. We offer comprehensive medical treatment and personalized therapy for your recovery.",
     siteName: "Vistacampo",
     locale: "en_US",
     type: "website",
@@ -26,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vistacampo - Addiction Rehabilitation Center",
-    description: "Comprehensive and confidential addiction treatment in Colonia Tovar, Venezuela.",
+    description:
+      "Specialized addiction rehabilitation center in Colonia Tovar, Venezuela. We offer comprehensive medical treatment and personalized therapy for your recovery.",
     images: ["/images/og-hero.png"],
   },
   robots: {

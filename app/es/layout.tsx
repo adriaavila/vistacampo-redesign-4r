@@ -3,12 +3,14 @@ import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button"
 
 export const metadata: Metadata = {
   title: "Vistacampo - Centro de Rehabilitación de Adicciones en Colonia Tovar",
-  description: "Centro especializado en tratamiento de adicciones en Colonia Tovar, Venezuela. Ofrecemos desintoxicación médica, terapia individual y grupal en un ambiente seguro y confidencial.",
+  description:
+    "Centro especializado en rehabilitación de adicciones en Colonia Tovar. Ofrecemos tratamiento médico integral y terapia personalizada para tu recuperación.",
   keywords: "rehabilitación, adicciones, desintoxicación, Colonia Tovar, Venezuela, tratamiento, terapia, centro de rehabilitación",
   authors: [{ name: "Vistacampo" }],
   openGraph: {
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
-    description: "Tratamiento integral and confidencial para adicciones en Colonia Tovar, Venezuela.",
+    description:
+      "Centro especializado en rehabilitación de adicciones en Colonia Tovar. Ofrecemos tratamiento médico integral y terapia personalizada para tu recuperación.",
     siteName: "Vistacampo",
     locale: "es_VE",
     type: "website",
@@ -24,7 +26,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vistacampo - Centro de Rehabilitación de Adicciones",
-    description: "Tratamiento integral y confidencial para adicciones en Colonia Tovar, Venezuela.",
+    description:
+      "Centro especializado en rehabilitación de adicciones en Colonia Tovar. Ofrecemos tratamiento médico integral y terapia personalizada para tu recuperación.",
     images: ["/images/og-hero.png"],
   },
   robots: {
