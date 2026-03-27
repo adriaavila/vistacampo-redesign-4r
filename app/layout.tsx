@@ -20,7 +20,6 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vistacampo.com"),
   title: "Vistacampo - Centro de Rehabilitación de Adicciones en Colonia Tovar",
   icons: {
     icon: "/vistacampo-favicon.png",

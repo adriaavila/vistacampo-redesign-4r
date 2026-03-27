@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   keywords:
     "addiction rehabilitation, detox, therapy, Colonia Tovar, Venezuela, treatment, recovery center",
   authors: [{ name: "Vistacampo" }],
-  metadataBase: new URL("https://vistacampo.com"),
   openGraph: {
     title: "Vistacampo - Addiction Rehabilitation Center",
     description: "Comprehensive and confidential addiction treatment in Colonia Tovar, Venezuela.",
