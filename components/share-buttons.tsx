@@ -139,7 +139,7 @@ export function ShareButtons({ title, url, description, language }: ShareButtons
       name: 'WhatsApp',
       icon: MessageCircle,
       action: shareOnWhatsApp,
-      color: 'bg-green-100 hover:bg-green-200 text-green-600'
+      color: 'bg-[rgba(26,54,40,0.12)] hover:bg-[rgba(26,54,40,0.18)] text-[#1a3628]'
     }
   ]
 

@@ -65,7 +65,7 @@ export function CTAOptimized({
         }
       case "admission":
         return {
-          bgColor: "bg-gradient-to-r from-emerald-600 to-teal-600",
+          bgColor: "bg-gradient-to-r from-[#1a3628] to-[#244b3a]",
           title: title || "Comienza tu proceso de recuperación",
           description:
             description ||
@@ -77,7 +77,7 @@ export function CTAOptimized({
         }
       case "floating":
         return {
-          bgColor: "bg-white border-2 border-emerald-600",
+          bgColor: "bg-white border-2 border-[#1a3628]",
           title: "¿Necesitas ayuda?",
           description: "Habla con un especialista ahora",
           primaryAction: "Llamar Ahora",
@@ -88,7 +88,7 @@ export function CTAOptimized({
         }
       default:
         return {
-          bgColor: "bg-gradient-to-r from-emerald-600 to-teal-600",
+          bgColor: "bg-gradient-to-r from-[#1a3628] to-[#244b3a]",
           title: title || "¿Listo para dar el primer paso?",
           description:
             description ||
@@ -112,8 +112,8 @@ export function CTAOptimized({
               <CardContent className="p-4">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <div className="bg-emerald-100 p-2 rounded-full">
-                      <config.icon className="h-4 w-4 text-emerald-600" />
+                    <div className="rounded-full bg-[rgba(26,54,40,0.12)] p-2">
+                      <config.icon className="h-4 w-4 text-[#1a3628]" />
                     </div>
                     <div>
                       <h3 className={`font-semibold ${config.textColor || "text-white"}`}>{config.title}</h3>
@@ -138,8 +138,8 @@ export function CTAOptimized({
                     size="sm"
                     className={
                       config.textColor
-                        ? "bg-emerald-600 hover:bg-emerald-700 text-white"
-                        : "bg-white text-emerald-600 hover:bg-gray-100"
+                        ? "bg-[#1a3628] text-white hover:bg-[#6b1f2b]"
+                        : "bg-white text-[#1a3628] hover:bg-gray-100"
                     }
                   >
                     <WhatsAppCtaIcon tone={config.textColor ? "contrast" : "brand"} size="sm" />
@@ -150,8 +150,8 @@ export function CTAOptimized({
                     size="sm"
                     className={
                       config.textColor
-                        ? "border-emerald-600 text-emerald-600 hover:bg-emerald-50"
-                        : "border-white text-white hover:bg-white hover:text-emerald-600"
+                        ? "border-[#1a3628] text-[#1a3628] hover:bg-[rgba(26,54,40,0.08)]"
+                        : "border-white text-white hover:bg-white hover:text-[#1a3628]"
                     }
                   >
                     <WhatsAppCtaIcon tone={config.textColor ? "brand" : "contrast"} size="sm" />
@@ -188,7 +188,7 @@ export function CTAOptimized({
               <Button
                 size="lg"
                 variant="secondary"
-                className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-lg"
+                className="bg-white px-8 py-4 text-lg text-[#1a3628] shadow-lg hover:bg-gray-100"
               >
                 <WhatsAppCtaIcon tone="brand" />
                 {config.primaryAction}
@@ -196,7 +196,7 @@ export function CTAOptimized({
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-emerald-600 text-lg px-8 py-4"
+                className="border-white px-8 py-4 text-lg text-white hover:bg-white hover:text-[#1a3628]"
               >
                 <WhatsAppCtaIcon tone="contrast" />
                 {config.secondaryAction}

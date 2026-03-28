@@ -6,7 +6,7 @@ type Props = {
 }
 
 const toneClasses = {
-  brand: "bg-emerald-500 shadow-[0_8px_24px_rgba(16,185,129,0.28)]",
+  brand: "bg-[#1a3628] shadow-[0_8px_24px_rgba(15,36,26,0.24)]",
   contrast: "bg-white/16 ring-1 ring-white/24",
 }
 
