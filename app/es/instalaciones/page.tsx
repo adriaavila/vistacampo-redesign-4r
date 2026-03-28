@@ -1,41 +1,24 @@
 "use client"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
-  Home,
   Users,
-  TreePine,
-  Shield,
-  Heart,
-  Phone,
   ArrowRight,
   Bed,
-  Coffee,
-  Dumbbell,
-  BookOpen,
-  Utensils,
-  Wifi,
-  Car,
-  Camera,
   ZoomIn,
-  MessageCircle,
   Building2,
   Trees,
-  Star,
-  MapPin,
-  Clock,
   CheckCircle,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { SiteCtaBand } from "@/components/site-page-primitives"
 import { WhatsAppCtaIcon } from "@/components/whatsapp-cta-icon"
 import { WHATSAPP_LINK } from "@/lib/constants"
-import { TreatmentHeroCollage } from "@/components/treatment-hero-collage"
 
 const instalacionesData = {
   habitaciones: [
@@ -91,7 +74,7 @@ const instalacionesData = {
         "Mesas de estudio",
         "Smart TV",
         "Zona de lectura",
-        "Comfort garantizado",
+        "Comodidad garantizada",
       ],
     },
     {
@@ -139,64 +122,139 @@ const instalacionesData = {
 }
 
 export default function InstalacionesPage() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const heroHighlights = [
+    { icon: Bed, label: "Habitaciones privadas y compartidas" },
+    { icon: Building2, label: "Espacios dedicados a terapia" },
+    { icon: Trees, label: "Entorno residencial en la naturaleza" },
+  ]
+  const heroSupportCards = [
+    {
+      src: "/images/habitacion-individual-premium.png",
+      alt: "Habitacion individual premium en Vistacampo",
+      label: "Comodidad en habitaciones privadas",
+    },
+    {
+      src: "/images/vc-sala-terapia-grupal.jpg",
+      alt: "Sala de terapia grupal dentro de Vistacampo",
+      label: "Espacios pensados para terapia grupal",
+    },
+  ]
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-teal-50 to-blue-50 py-20">
-        <TreatmentHeroCollage images={[
-          "/images/vc-instalaciones.jpeg",
-          "/images/habitacion-individual-premium.png",
-          "/images/vc-sala-terapia-grupal.jpg",
-          "/images/vc-vista.jpeg",
-          "/images/vc-comedor.jpeg",
-          "/images/suite-recuperacion.png",
-          "/images/areaDeportivaVC.jpeg",
-          "/images/vc-sala-cala.jpeg",
-          "/images/vc-panoramica.webp",
-        ]} />
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(191,161,95,0.2),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(107,31,43,0.14),transparent_24%),linear-gradient(180deg,#f6f2ec_0%,#fafafa_72%)] py-12 sm:py-16 lg:py-20">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[linear-gradient(140deg,rgba(255,255,255,0.76),rgba(255,255,255,0.18)_40%,rgba(255,255,255,0.84))]"
+        />
+
         <div className="container relative z-10 mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
-              Nuestras instalaciones
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6">
-              Instalaciones modernas y cómodas
-            </h1>
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Nuestras instalaciones están diseñadas para proporcionar un ambiente seguro, cómodo y terapéutico para tu proceso de recuperación.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-                  <WhatsAppCtaIcon tone="contrast" />
-                  Agendar visita
-                </Button>
-              </a>
-              <Link href="/es/contacto">
-                <Button variant="outline" size="lg" className="border-rose-900 text-rose-900">
-                  Contáctanos
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.92fr)] lg:gap-16">
+            <div className="max-w-2xl text-center lg:text-left">
+              <Badge variant="outline" className="vc-kicker mb-4">
+                Nuestras instalaciones
+              </Badge>
+              <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-[0.94] text-[#0f241a] sm:text-5xl lg:mx-0 lg:text-6xl">
+                Instalaciones modernas y cómodas
+              </h1>
+              <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl lg:mx-0">
+                Nuestras instalaciones están diseñadas para ofrecer un entorno seguro, cómodo y terapéutico durante
+                cada etapa de la recuperación.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
+                {heroHighlights.map(({ icon: Icon, label }) => (
+                  <div
+                    key={label}
+                    className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/84 px-4 py-2 text-sm text-[rgba(29,47,38,0.76)] shadow-sm backdrop-blur-sm"
+                  >
+                    <Icon className="h-4 w-4 text-[#6b1f2b]" />
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="w-full bg-[#1a3628] hover:bg-[#6b1f2b] sm:w-auto">
+                    <WhatsAppCtaIcon tone="contrast" />
+                    Agendar visita
+                  </Button>
+                </a>
+                <Link href="/es/contacto">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="w-full border-[#1a3628] bg-white/76 text-[#1a3628] shadow-sm transition-all duration-300 hover:bg-[#1a3628] hover:text-[#fafafa] sm:w-auto"
+                  >
+                    Contáctanos
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="mx-auto w-full max-w-[38rem]">
+              <div className="vc-page-panel p-3">
+                <div className="relative overflow-hidden rounded-[1.5rem]">
+                  <div className="absolute left-4 top-4 z-10 inline-flex rounded-full border border-white/50 bg-slate-950/62 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+                    Entorno terapéutico residencial
+                  </div>
+                  <div className="relative aspect-[4/5] sm:aspect-[5/4]">
+                    <Image
+                      src="/images/vc-instalaciones.jpeg"
+                      alt="Residencia principal de Vistacampo rodeada de naturaleza"
+                      fill
+                      priority
+                      sizes="(min-width: 1024px) 38rem, (min-width: 640px) 80vw, 100vw"
+                      className="object-cover object-[center_35%]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/22 via-transparent to-white/8" />
+                    <div className="absolute inset-x-4 bottom-4 z-10 rounded-[1.25rem] border border-white/15 bg-slate-950/68 p-4 shadow-lg backdrop-blur-md">
+                      <p className="text-sm font-medium leading-relaxed text-white">
+                        Comodidad, privacidad y naturaleza integradas en la experiencia diaria del tratamiento.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4 grid grid-cols-2 gap-4">
+                {heroSupportCards.map((card) => (
+                  <div
+                    key={card.label}
+                    className="vc-page-panel p-2"
+                  >
+                    <div className="relative overflow-hidden rounded-[1rem]">
+                      <div className="relative aspect-[5/4]">
+                        <Image
+                          src={card.src}
+                          alt={card.alt}
+                          fill
+                          sizes="(min-width: 1024px) 17rem, 45vw"
+                          className="object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                    <p className="px-2 pb-2 pt-3 text-sm font-medium leading-snug text-slate-700">{card.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Instalaciones Overview */}
-      <section className="py-20 bg-white">
+      <section className="bg-[rgba(250,250,250,0.64)] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
+            <div className="mb-16 text-center">
+              <Badge variant="outline" className="vc-kicker mb-4">
                 Instalaciones completas
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="vc-section-title mb-4">
                 Todo lo que necesitas para tu recuperación
               </h2>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="vc-section-copy mx-auto max-w-3xl">
                 Nuestras instalaciones incluyen alojamientos cómodos, espacios terapéuticos y áreas exteriores diseñadas para apoyar tu proceso de sanación.
               </p>
             </div>
@@ -220,7 +278,7 @@ export default function InstalacionesPage() {
               <TabsContent value="habitaciones" className="space-y-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {instalacionesData.habitaciones.map((habitacion) => (
-                    <Card key={habitacion.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <Card key={habitacion.id} className="overflow-hidden transition-transform duration-300 hover:-translate-y-1">
                       <CardHeader className="p-0">
                         <div className="relative overflow-hidden rounded-t-lg">
                           <Image
@@ -237,7 +295,6 @@ export default function InstalacionesPage() {
                                 variant="secondary"
                                 size="icon"
                                 className="absolute top-2 right-2 bg-white/80 hover:bg-white"
-                                onClick={() => setSelectedImage(habitacion.imagen)}
                               >
                                 <ZoomIn className="h-4 w-4" />
                               </Button>
@@ -257,14 +314,14 @@ export default function InstalacionesPage() {
                         </div>
                       </CardHeader>
                       <CardContent className="p-6">
-                        <CardTitle className="text-xl mb-3">{habitacion.titulo}</CardTitle>
-                        <CardDescription className="text-gray-600 mb-4">
+                        <CardTitle className="mb-3 text-xl text-[#0f241a]">{habitacion.titulo}</CardTitle>
+                        <CardDescription className="mb-4 text-[rgba(29,47,38,0.72)]">
                           {habitacion.descripcion}
                         </CardDescription>
                         <div className="space-y-2">
                           {habitacion.caracteristicas.map((caracteristica, index) => (
-                            <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="h-4 w-4 text-emerald-600" />
+                            <div key={index} className="flex items-center gap-2 text-sm text-[rgba(29,47,38,0.72)]">
+                              <CheckCircle className="h-4 w-4 text-[#6b1f2b]" />
                               <span>{caracteristica}</span>
                             </div>
                           ))}
@@ -278,7 +335,7 @@ export default function InstalacionesPage() {
               <TabsContent value="comunes" className="space-y-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {instalacionesData.zonasComunes.map((zona) => (
-                    <Card key={zona.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <Card key={zona.id} className="overflow-hidden transition-transform duration-300 hover:-translate-y-1">
                       <CardHeader className="p-0">
                         <div className="relative overflow-hidden rounded-t-lg">
                           <Image
@@ -294,7 +351,6 @@ export default function InstalacionesPage() {
                                 variant="secondary"
                                 size="icon"
                                 className="absolute top-2 right-2 bg-white/80 hover:bg-white"
-                                onClick={() => setSelectedImage(zona.imagen)}
                               >
                                 <ZoomIn className="h-4 w-4" />
                               </Button>
@@ -313,14 +369,14 @@ export default function InstalacionesPage() {
                         </div>
                       </CardHeader>
                       <CardContent className="p-6">
-                        <CardTitle className="text-xl mb-3">{zona.titulo}</CardTitle>
-                        <CardDescription className="text-gray-600 mb-4">
+                        <CardTitle className="mb-3 text-xl text-[#0f241a]">{zona.titulo}</CardTitle>
+                        <CardDescription className="mb-4 text-[rgba(29,47,38,0.72)]">
                           {zona.descripcion}
                         </CardDescription>
                         <div className="space-y-2">
                           {zona.caracteristicas.map((caracteristica, index) => (
-                            <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="h-4 w-4 text-emerald-600" />
+                            <div key={index} className="flex items-center gap-2 text-sm text-[rgba(29,47,38,0.72)]">
+                              <CheckCircle className="h-4 w-4 text-[#6b1f2b]" />
                               <span>{caracteristica}</span>
                             </div>
                           ))}
@@ -334,7 +390,7 @@ export default function InstalacionesPage() {
               <TabsContent value="exteriores" className="space-y-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {instalacionesData.areasExteriores.map((area) => (
-                    <Card key={area.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <Card key={area.id} className="overflow-hidden transition-transform duration-300 hover:-translate-y-1">
                       <CardHeader className="p-0">
                         <div className="relative overflow-hidden rounded-t-lg">
                           <Image
@@ -351,7 +407,6 @@ export default function InstalacionesPage() {
                                 variant="secondary"
                                 size="icon"
                                 className="absolute top-2 right-2 bg-white/80 hover:bg-white"
-                                onClick={() => setSelectedImage(area.imagen)}
                               >
                                 <ZoomIn className="h-4 w-4" />
                               </Button>
@@ -371,14 +426,14 @@ export default function InstalacionesPage() {
                         </div>
                       </CardHeader>
                       <CardContent className="p-6">
-                        <CardTitle className="text-xl mb-3">{area.titulo}</CardTitle>
-                        <CardDescription className="text-gray-600 mb-4">
+                        <CardTitle className="mb-3 text-xl text-[#0f241a]">{area.titulo}</CardTitle>
+                        <CardDescription className="mb-4 text-[rgba(29,47,38,0.72)]">
                           {area.descripcion}
                         </CardDescription>
                         <div className="space-y-2">
                           {area.caracteristicas.map((caracteristica, index) => (
-                            <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="h-4 w-4 text-emerald-600" />
+                            <div key={index} className="flex items-center gap-2 text-sm text-[rgba(29,47,38,0.72)]">
+                              <CheckCircle className="h-4 w-4 text-[#6b1f2b]" />
                               <span>{caracteristica}</span>
                             </div>
                           ))}
@@ -394,32 +449,32 @@ export default function InstalacionesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              ¿Listo para comenzar tu proceso de recuperación?
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Nuestras instalaciones están listas para recibirte. Contáctanos para agendar una visita y conocer más sobre nuestros programas de tratamiento.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <SiteCtaBand
+        badge="Visita y orientación"
+        title="Conoce de cerca el entorno que acompaña la recuperación"
+        description="Agenda una visita o conversa con nuestro equipo para entender cómo funcionan los espacios, la convivencia y la admisión."
+        actions={
+          <>
+            <Button asChild size="lg" className="bg-white text-[#1a3628] hover:bg-[#f6f2ec]">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  <WhatsAppCtaIcon tone="brand" />
-                  Agendar visita
-                </Button>
+                <WhatsAppCtaIcon tone="brand" />
+                Agendar visita
               </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/30 bg-white/8 text-white hover:bg-white hover:text-[#1a3628]"
+            >
               <Link href="/es/contacto">
-                <Button size="lg" variant="outline" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  Contáctanos
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                Contáctanos
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+            </Button>
+          </>
+        }
+      />
     </div>
   )
 }

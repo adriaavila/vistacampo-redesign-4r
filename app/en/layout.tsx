@@ -9,20 +9,27 @@ export const metadata: Metadata = {
     "addiction rehabilitation, detox, therapy, Colonia Tovar, Venezuela, treatment, recovery center",
   authors: [{ name: "Vistacampo" }],
   openGraph: {
-    title: "Vistacampo - Addiction Rehabilitation Center",
+    title: "Recovery is possible | Vistacampo",
     description:
-      "Specialized addiction rehabilitation center in Colonia Tovar, Venezuela. We offer comprehensive medical treatment and personalized therapy for your recovery.",
+      "Medical, psychological, and family treatment in a private, warm, and professional setting to begin a real recovery with dignity.",
     siteName: "Vistacampo",
     locale: "en_US",
     type: "website",
-    images: ["/images/og-hero-with-text.jpg"],
+    images: [
+      {
+        url: "/en/opengraph-image/",
+        width: 1200,
+        height: 630,
+        alt: "Vistacampo - Recovery is possible",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vistacampo - Addiction Rehabilitation Center",
+    title: "Recovery is possible | Vistacampo",
     description:
-      "Specialized addiction rehabilitation center in Colonia Tovar, Venezuela. We offer comprehensive medical treatment and personalized therapy for your recovery.",
-    images: ["/images/og-hero-with-text.jpg"],
+      "Medical, psychological, and family treatment in a private, warm, and professional setting to begin a real recovery with dignity.",
+    images: ["/en/opengraph-image/"],
   },
   robots: {
     index: true,

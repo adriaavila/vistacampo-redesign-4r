@@ -46,8 +46,8 @@ export function TreatmentPhaseCarousel({ slides, previousLabel, nextLabel }: Pro
   }
 
   return (
-    <div className="group relative overflow-hidden rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-teal-50 shadow-[0_30px_80px_-40px_rgba(5,150,105,0.5)]">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.18),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(20,184,166,0.16),transparent_42%)]" />
+    <div className="group relative overflow-hidden rounded-[2rem] border border-[rgba(26,54,40,0.1)] bg-[linear-gradient(135deg,#f6f2ec_0%,#ffffff_48%,rgba(26,54,40,0.05)_100%)] shadow-[0_30px_80px_-40px_rgba(15,36,26,0.42)]">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(26,54,40,0.14),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(191,161,95,0.16),transparent_42%)]" />
 
       <div className="relative aspect-[5/4] w-full">
         {slides.map((slide, index) => (
@@ -73,7 +73,7 @@ export function TreatmentPhaseCarousel({ slides, previousLabel, nextLabel }: Pro
         ))}
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-emerald-950/80 via-emerald-900/20 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[rgba(15,36,26,0.9)] via-[rgba(15,36,26,0.22)] to-transparent" />
 
       <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 px-5 pb-5">
         <div className="max-w-[70%] rounded-full border border-white/20 bg-black/25 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
@@ -103,7 +103,7 @@ export function TreatmentPhaseCarousel({ slides, previousLabel, nextLabel }: Pro
             type="button"
             onClick={goToPrevious}
             aria-label={previousLabel}
-            className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full border border-white/80 bg-white/85 text-emerald-700 shadow-lg backdrop-blur transition hover:bg-white"
+            className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full border border-white/80 bg-white/85 text-[#1a3628] shadow-lg backdrop-blur transition hover:bg-white"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -111,7 +111,7 @@ export function TreatmentPhaseCarousel({ slides, previousLabel, nextLabel }: Pro
             type="button"
             onClick={goToNext}
             aria-label={nextLabel}
-            className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full border border-white/80 bg-white/85 text-emerald-700 shadow-lg backdrop-blur transition hover:bg-white"
+            className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full border border-white/80 bg-white/85 text-[#1a3628] shadow-lg backdrop-blur transition hover:bg-white"
           >
             <ChevronRight className="h-5 w-5" />
           </button>

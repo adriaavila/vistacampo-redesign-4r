@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 
+import { SiteLegalPage } from "@/components/site-page-primitives"
+
 export const metadata: Metadata = {
   title: "Política de Privacidad | Vistacampo",
   description: "Política de privacidad y protección de datos personales de Vistacampo.",
@@ -8,62 +10,53 @@ export const metadata: Metadata = {
 
 export default function PrivacidadPage() {
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Política de Privacidad</h1>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="text-gray-600 mb-6">
-              Última actualización: {new Date().toLocaleDateString('es-ES')}
-            </p>
-            
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Información que recopilamos</h2>
-              <p className="text-gray-700 mb-4">
-                Recopilamos información que usted nos proporciona directamente, como cuando se comunica con nosotros a través de nuestro sitio web, 
-                por teléfono o por correo electrónico.
-              </p>
-            </section>
+    <SiteLegalPage
+      badge="Política de privacidad"
+      title="Protección de datos con criterio y confidencialidad"
+      description="Esta página resume cómo se recopila, utiliza y protege la información compartida con Vistacampo."
+      lastUpdated={`Última actualización: ${new Date().toLocaleDateString("es-ES")}`}
+    >
+      <section>
+        <h2>1. Información que recopilamos</h2>
+        <p>
+          Recopilamos la información que usted nos proporciona directamente cuando se comunica con nosotros por
+          teléfono, correo electrónico, formularios del sitio o canales de mensajería.
+        </p>
+      </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Cómo utilizamos su información</h2>
-              <p className="text-gray-700 mb-4">
-                Utilizamos la información que recopilamos para proporcionar nuestros servicios de tratamiento, 
-                comunicarnos con usted y mejorar nuestros servicios.
-              </p>
-            </section>
+      <section>
+        <h2>2. Cómo utilizamos su información</h2>
+        <p>
+          Utilizamos la información recibida para responder consultas, orientar sobre nuestros servicios, facilitar la
+          atención y mejorar la calidad de la experiencia ofrecida por Vistacampo.
+        </p>
+      </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Protección de la información</h2>
-              <p className="text-gray-700 mb-4">
-                Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger su información personal 
-                contra el acceso no autorizado, la alteración, divulgación o destrucción.
-              </p>
-            </section>
+      <section>
+        <h2>3. Protección de la información</h2>
+        <p>
+          Implementamos medidas técnicas y organizativas razonables para proteger los datos personales frente a acceso
+          no autorizado, alteración, divulgación o pérdida.
+        </p>
+      </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Sus derechos</h2>
-              <p className="text-gray-700 mb-4">
-                Usted tiene derecho a acceder, corregir, eliminar y oponerse al procesamiento de su información personal. 
-                Para ejercer estos derechos, contáctenos.
-              </p>
-            </section>
+      <section>
+        <h2>4. Sus derechos</h2>
+        <p>
+          Usted puede solicitar acceso, corrección o eliminación de su información personal, así como manifestar su
+          oposición al tratamiento de datos cuando corresponda.
+        </p>
+      </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Contacto</h2>
-              <p className="text-gray-700 mb-4">
-                Si tiene preguntas sobre esta política de privacidad, puede contactarnos en:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 ml-4">
-                <li>Email: info@vistacampo.com</li>
-                <li>Teléfono: (+58) 412-231-5968</li>
-                <li>Dirección: Vistacampo Therapeutic Center, Colonia Tovar, Venezuela</li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
+      <section>
+        <h2>5. Contacto</h2>
+        <p>Si tiene preguntas sobre esta política de privacidad, puede escribirnos a través de:</p>
+        <ul>
+          <li>Email: info@vistacampo.com</li>
+          <li>Teléfono: (+58) 412-231-5968</li>
+          <li>Ubicación: Colonia Tovar, Venezuela</li>
+        </ul>
+      </section>
+    </SiteLegalPage>
   )
 }

@@ -7,17 +7,12 @@ import {
   Brain,
   Heart,
   Users,
-  GraduationCap,
-  Award,
-  Calendar,
   ArrowRight,
-  Star,
-  Shield,
-  FileText,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { SiteCtaBand } from "@/components/site-page-primitives"
 
 export const metadata: Metadata = {
   title: "Our Medical Team - Addiction Specialists | Vistacampo",
@@ -31,9 +26,9 @@ const teamData = {
     {
       id: 1,
       name: "Julio González",
-      position: "Founder and director Vistacampo",
+      position: "Founder and director of Vistacampo",
       specialty: "Addictions",
-      image: "/images/Julio-Gonzales-Fundador y Director Vistacampo.jpg",
+      image: "/images/julio-gonzalez-equipo.jpg",
       experience: "20+ years",
       education: ["MD - Central University of Venezuela", "Specialization in Addictions - University Hospital"],
       certifications: ["Certified in Addiction Medicine", "Member of the Venezuelan Society of Addictions"],
@@ -43,7 +38,7 @@ const teamData = {
     },
     {
       id: 2,
-      name: "Dr. María Alvarez",
+      name: "Dr. María Álvarez",
       position: "Scientific committee member",
       specialty: "Clinical psychology",
       image: "/images/Maria-Alvares.jpg",
@@ -54,12 +49,12 @@ const teamData = {
       ],
       certifications: ["Specialist in Cognitive-Behavioral Therapy", "Certification in Systemic Family Therapy"],
       description:
-        "Dr. Alvarez coordinates all therapeutic programs at Vistacampo. Her experience in family therapy and empathetic approach have been fundamental in the recovery of hundreds of patients and their families.",
+        "Dr. Álvarez coordinates all therapeutic programs at Vistacampo. Her experience in family therapy and empathetic approach have been fundamental in the recovery of hundreds of patients and their families.",
       specialties: ["Individual therapy", "Family therapy", "Relapse prevention"],
     },
     {
       id: 3,
-      name: "Jorge Marquez",
+      name: "Jorge Márquez",
       position: "Management",
       specialty: "Management",
       image: "/images/Jorge-Marquez-Gerencia.png",
@@ -72,7 +67,7 @@ const teamData = {
     },
     {
       id: 4,
-      name: "Agustin Gabaldon",
+      name: "Agustín Gabaldón",
       position: "Director",
       specialty: "Management",
       image: "/images/Agustin-Gabaldon-Director.png",
@@ -126,7 +121,7 @@ const teamData = {
   therapists: [
     {
       id: 4,
-      name: "Alejandro Marquez",
+      name: "Alejandro Márquez",
       position: "Family Therapist",
       specialty: "Family Therapy",
       image: "/images/Alejandro-Marquez-Equipo terapeutico.png",
@@ -179,47 +174,55 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        {/* Background photo */}
-        <div aria-hidden="true" className="absolute inset-0">
-          <Image
-            src="/images/equipo-vistacampo.jpg"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          {/* Readability overlays — same treatment as tratamiento */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9),rgba(255,255,255,0.58)_28%,rgba(255,255,255,0.18)_56%,transparent_82%),radial-gradient(circle_at_top_left,rgba(16,185,129,0.14),transparent_28%),radial-gradient(circle_at_top_right,rgba(56,189,248,0.14),transparent_26%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.18),rgba(255,255,255,0.06)_24%,rgba(255,255,255,0.04)_76%,rgba(255,255,255,0.14))]" />
-          <div className="absolute inset-0 bg-white/[0.03] backdrop-blur-[1.5px]" />
-        </div>
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(191,161,95,0.18),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(107,31,43,0.14),transparent_24%),linear-gradient(180deg,#f6f2ec_0%,#fafafa_72%)] py-12 sm:py-16 lg:py-20">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.72),rgba(255,255,255,0.18)_40%,rgba(255,255,255,0.84))]"
+        />
 
         <div className="container relative z-10 mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4 text-rose-900 bg-rose-900/10">
-              Our team
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-rose-900 mb-6 drop-shadow-[0_2px_18px_rgba(255,255,255,0.92)]">
-              Meet our specialized team
-            </h1>
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed drop-shadow-[0_1px_12px_rgba(255,255,255,0.88)]">
-              Our multidisciplinary team of professionals is committed to providing the highest quality care and support
-              for your recovery journey.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <Stethoscope className="h-4 w-4 text-emerald-600" />
-                <span>Medical specialists</span>
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:gap-14">
+            <div className="order-2 text-center lg:order-1 lg:text-left">
+              <Badge variant="outline" className="vc-kicker mb-4">
+                Our team
+              </Badge>
+              <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-[0.95] text-[#0f241a] lg:mx-0 lg:text-6xl">
+                Meet our specialized team
+              </h1>
+              <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl lg:mx-0">
+                Our multidisciplinary team of professionals is committed to providing the highest quality care and
+                support for your recovery journey.
+              </p>
+              <div className="flex flex-wrap justify-center gap-3 text-sm text-slate-700 lg:justify-start">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/82 px-4 py-2 shadow-sm backdrop-blur-sm">
+                  <Stethoscope className="h-4 w-4 text-[#6b1f2b]" />
+                  <span>Medical specialists</span>
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/82 px-4 py-2 shadow-sm backdrop-blur-sm">
+                  <Brain className="h-4 w-4 text-[#6b1f2b]" />
+                  <span>Clinical psychologists</span>
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/82 px-4 py-2 shadow-sm backdrop-blur-sm">
+                  <Heart className="h-4 w-4 text-[#6b1f2b]" />
+                  <span>Experienced therapists</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Brain className="h-4 w-4 text-emerald-600" />
-                <span>Clinical psychologists</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Heart className="h-4 w-4 text-emerald-600" />
-                <span>Experienced therapists</span>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="vc-page-panel relative mx-auto max-w-[36rem] overflow-hidden">
+                <div className="absolute inset-x-0 top-0 z-10 h-20 bg-gradient-to-b from-white/28 via-white/8 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 z-10 h-28 bg-gradient-to-t from-slate-950/14 via-slate-950/0 to-transparent" />
+                <div className="relative aspect-[4/3] sm:aspect-[3/2]">
+                  <Image
+                    src="/images/equipo-vistacampo.jpg"
+                    alt="Three Vistacampo team members standing together in the clinic."
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 36rem, (min-width: 640px) 80vw, 100vw"
+                    className="object-cover object-[center_22%] sm:object-[center_24%]"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -227,17 +230,17 @@ export default function TeamPage() {
       </section>
 
       {/* Team Overview */}
-      <section className="py-20 bg-white">
+      <section className="bg-[rgba(250,250,250,0.64)] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <Badge variant="outline" className="text-emerald-600 border-emerald-600 mb-4">
+            <div className="mb-16 text-center">
+              <Badge variant="outline" className="vc-kicker mb-4">
                 Professional excellence
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="vc-section-title mb-4">
                 A team committed to your recovery
               </h2>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="vc-section-copy mx-auto max-w-3xl">
                 Our team combines medical expertise, psychological knowledge, and therapeutic experience to provide
                 comprehensive and personalized care for each patient.
               </p>
@@ -266,23 +269,23 @@ export default function TeamPage() {
               <TabsContent value="management" className="space-y-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {teamData.management.map((member) => (
-                    <Card key={member.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                      <CardContent className="p-6">
+                    <Card key={member.id} className="h-full transition-transform duration-300 hover:-translate-y-1">
+                      <CardContent className="p-7">
                         <div className="text-center mb-6">
-                          <div className="relative w-32 h-32 mx-auto mb-4">
+                          <div className="relative mx-auto mb-4 h-36 w-32 overflow-hidden rounded-[1.75rem] ring-1 ring-[rgba(191,161,95,0.22)]">
                             <Image
                               src={member.image}
                               alt={`${member.name}, ${member.position} at Vistacampo rehabilitation center`}
                               title={`${member.name} - ${member.specialty}`}
                               fill
-                              className="rounded-full object-cover"
+                              className="object-cover"
                             />
                           </div>
                           <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                           <p className="text-emerald-600 font-semibold mb-1">{member.position}</p>
                           <p className="text-gray-600 text-sm mb-3">{member.specialty}</p>
                           {member.experience && (
-                            <Badge variant="secondary" className="text-emerald-600 bg-emerald-100">
+                            <Badge variant="secondary" className="bg-[rgba(191,161,95,0.12)] text-[#6b1f2b]">
                               {member.experience} experience
                             </Badge>
                           )}
@@ -298,7 +301,11 @@ export default function TeamPage() {
                             <h4 className="font-semibold text-gray-900 mb-2">Specialties</h4>
                             <div className="flex flex-wrap gap-2">
                               {member.specialties.map((specialty, index) => (
-                                <Badge key={index} variant="outline" className="text-xs">
+                                <Badge
+                                  key={index}
+                                  variant="outline"
+                                  className="border-[rgba(191,161,95,0.28)] bg-white text-xs text-[rgba(29,47,38,0.78)]"
+                                >
                                   {specialty}
                                 </Badge>
                               ))}
@@ -314,22 +321,22 @@ export default function TeamPage() {
               <TabsContent value="doctors" className="space-y-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {teamData.doctors.map((member) => (
-                    <Card key={member.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                      <CardContent className="p-6">
+                    <Card key={member.id} className="h-full transition-transform duration-300 hover:-translate-y-1">
+                      <CardContent className="p-7">
                         <div className="text-center mb-6">
-                          <div className="relative w-32 h-32 mx-auto mb-4">
+                          <div className="relative mx-auto mb-4 h-36 w-32 overflow-hidden rounded-[1.75rem] ring-1 ring-[rgba(191,161,95,0.22)]">
                             <Image
                               src={member.image}
                               alt={`${member.name}, ${member.position} at Vistacampo rehabilitation center`}
                               title={`${member.name} - ${member.specialty}`}
                               fill
-                              className="rounded-full object-cover"
+                              className="object-cover"
                             />
                           </div>
                           <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                           <p className="text-emerald-600 font-semibold mb-1">{member.position}</p>
                           <p className="text-gray-600 text-sm mb-3">{member.specialty}</p>
-                          <Badge variant="secondary" className="text-emerald-600 bg-emerald-100">
+                          <Badge variant="secondary" className="bg-[rgba(191,161,95,0.12)] text-[#6b1f2b]">
                             {member.experience} experience
                           </Badge>
                         </div>
@@ -338,7 +345,11 @@ export default function TeamPage() {
                           <h4 className="font-semibold text-gray-900 mb-2">Specialties</h4>
                           <div className="flex flex-wrap gap-2">
                             {member.specialties.map((specialty, index) => (
-                              <Badge key={index} variant="outline" className="text-xs">
+                              <Badge
+                                key={index}
+                                variant="outline"
+                                className="border-[rgba(191,161,95,0.28)] bg-white text-xs text-[rgba(29,47,38,0.78)]"
+                              >
                                 {specialty}
                               </Badge>
                             ))}
@@ -353,22 +364,22 @@ export default function TeamPage() {
               <TabsContent value="therapists" className="space-y-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {teamData.therapists.map((member) => (
-                    <Card key={member.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                      <CardContent className="p-6">
+                    <Card key={member.id} className="h-full transition-transform duration-300 hover:-translate-y-1">
+                      <CardContent className="p-7">
                         <div className="text-center mb-6">
-                          <div className="relative w-32 h-32 mx-auto mb-4">
+                          <div className="relative mx-auto mb-4 h-36 w-32 overflow-hidden rounded-[1.75rem] ring-1 ring-[rgba(191,161,95,0.22)]">
                             <Image
                               src={member.image}
                               alt={`${member.name}, ${member.position} at Vistacampo rehabilitation center`}
                               title={`${member.name} - ${member.specialty}`}
                               fill
-                              className="rounded-full object-cover"
+                              className="object-cover"
                             />
                           </div>
                           <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                           <p className="text-emerald-600 font-semibold mb-1">{member.position}</p>
                           <p className="text-gray-600 text-sm mb-3">{member.specialty}</p>
-                          <Badge variant="secondary" className="text-emerald-600 bg-emerald-100">
+                          <Badge variant="secondary" className="bg-[rgba(191,161,95,0.12)] text-[#6b1f2b]">
                             {member.experience} experience
                           </Badge>
                         </div>
@@ -377,7 +388,11 @@ export default function TeamPage() {
                           <h4 className="font-semibold text-gray-900 mb-2">Specialties</h4>
                           <div className="flex flex-wrap gap-2">
                             {member.specialties.map((specialty, index) => (
-                              <Badge key={index} variant="outline" className="text-xs">
+                              <Badge
+                                key={index}
+                                variant="outline"
+                                className="border-[rgba(191,161,95,0.28)] bg-white text-xs text-[rgba(29,47,38,0.78)]"
+                              >
                                 {specialty}
                               </Badge>
                             ))}
@@ -392,22 +407,22 @@ export default function TeamPage() {
               <TabsContent value="support" className="space-y-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {teamData.support.map((member) => (
-                    <Card key={member.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                      <CardContent className="p-6">
+                    <Card key={member.id} className="h-full transition-transform duration-300 hover:-translate-y-1">
+                      <CardContent className="p-7">
                         <div className="text-center mb-6">
-                          <div className="relative w-32 h-32 mx-auto mb-4">
+                          <div className="relative mx-auto mb-4 h-36 w-32 overflow-hidden rounded-[1.75rem] ring-1 ring-[rgba(191,161,95,0.22)]">
                             <Image
                               src={member.image}
                               alt={`${member.name}, ${member.position} at Vistacampo rehabilitation center`}
                               title={`${member.name} - ${member.specialty}`}
                               fill
-                              className="rounded-full object-cover"
+                              className="object-cover"
                             />
                           </div>
                           <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                           <p className="text-emerald-600 font-semibold mb-1">{member.position}</p>
                           <p className="text-gray-600 text-sm mb-3">{member.specialty}</p>
-                          <Badge variant="secondary" className="text-emerald-600 bg-emerald-100">
+                          <Badge variant="secondary" className="bg-[rgba(191,161,95,0.12)] text-[#6b1f2b]">
                             {member.experience} experience
                           </Badge>
                         </div>
@@ -416,7 +431,11 @@ export default function TeamPage() {
                           <h4 className="font-semibold text-gray-900 mb-2">Specialties</h4>
                           <div className="flex flex-wrap gap-2">
                             {member.specialties.map((specialty, index) => (
-                              <Badge key={index} variant="outline" className="text-xs">
+                              <Badge
+                                key={index}
+                                variant="outline"
+                                className="border-[rgba(191,161,95,0.28)] bg-white text-xs text-[rgba(29,47,38,0.78)]"
+                              >
                                 {specialty}
                               </Badge>
                             ))}
@@ -433,31 +452,29 @@ export default function TeamPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to start your recovery journey?
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Speak with a specialist to understand the treatment approach and the next steps with clarity.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/en/contacto">
-                <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  Contact a specialist
-                </Button>
-              </Link>
+      <SiteCtaBand
+        badge="Team and admission"
+        title="Speak with professionals who understand each stage of recovery"
+        description="We can guide you through the initial assessment, residential treatment model, and the next step that best fits your situation."
+        actions={
+          <>
+            <Button asChild size="lg" className="bg-white text-[#1a3628] hover:bg-[#f6f2ec]">
+              <Link href="/en/contacto">Contact a specialist</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/30 bg-white/8 text-white hover:bg-white hover:text-[#1a3628]"
+            >
               <Link href="/en/tratamiento">
-                <Button size="lg" variant="outline" className="bg-white text-emerald-600 hover:bg-gray-100">
-                  Explore treatment options
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                Explore treatment options
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+            </Button>
+          </>
+        }
+      />
     </div>
   )
 }

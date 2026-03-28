@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 
+import { SiteLegalPage } from "@/components/site-page-primitives"
+
 export const metadata: Metadata = {
   title: "Términos y Condiciones | Vistacampo",
   description: "Términos y condiciones de uso de los servicios de Vistacampo.",
@@ -8,78 +10,61 @@ export const metadata: Metadata = {
 
 export default function TerminosPage() {
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Términos y Condiciones</h1>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="text-gray-600 mb-6">
-              Última actualización: {new Date().toLocaleDateString('es-ES')}
-            </p>
-            
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Aceptación de los términos</h2>
-              <p className="text-gray-700 mb-4">
-                Al acceder y utilizar nuestros servicios, usted acepta estar sujeto a estos términos y condiciones. 
-                Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestros servicios.
-              </p>
-            </section>
+    <SiteLegalPage
+      badge="Términos y condiciones"
+      title="Condiciones de uso y alcance de nuestros servicios"
+      description="Estos términos describen el marco general de uso del sitio y de la información compartida por Vistacampo."
+      lastUpdated={`Última actualización: ${new Date().toLocaleDateString("es-ES")}`}
+    >
+      <section>
+        <h2>1. Aceptación de los términos</h2>
+        <p>
+          Al acceder y utilizar este sitio o al interactuar con nuestros canales de atención, usted acepta estos
+          términos y condiciones de manera general.
+        </p>
+      </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Descripción de los servicios</h2>
-              <p className="text-gray-700 mb-4">
-                Vistacampo proporciona servicios de tratamiento y rehabilitación para adicciones. 
-                Nuestros servicios incluyen evaluación médica, terapia individual y grupal, y programas de recuperación.
-              </p>
-            </section>
+      <section>
+        <h2>2. Descripción de los servicios</h2>
+        <p>
+          Vistacampo ofrece información y orientación relacionada con sus programas de tratamiento, evaluación,
+          atención médica, intervención terapéutica y seguimiento.
+        </p>
+      </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Responsabilidades del paciente</h2>
-              <p className="text-gray-700 mb-4">
-                Los pacientes son responsables de proporcionar información precisa sobre su historial médico, 
-                seguir las recomendaciones del equipo médico y participar activamente en su proceso de recuperación.
-              </p>
-            </section>
+      <section>
+        <h2>3. Responsabilidades del paciente o familiar</h2>
+        <p>
+          La información suministrada debe ser veraz y suficiente para orientar adecuadamente el caso, y las decisiones
+          clínicas finales dependerán de la evaluación profesional correspondiente.
+        </p>
+      </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Confidencialidad</h2>
-              <p className="text-gray-700 mb-4">
-                Mantenemos la confidencialidad de toda la información médica y personal de nuestros pacientes, 
-                excepto cuando la ley lo requiera o cuando sea necesario para su seguridad.
-              </p>
-            </section>
+      <section>
+        <h2>4. Confidencialidad</h2>
+        <p>
+          Toda información compartida en el proceso de contacto o atención será manejada con la discreción y el respeto
+          que exige la naturaleza del servicio.
+        </p>
+      </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Limitación de responsabilidad</h2>
-              <p className="text-gray-700 mb-4">
-                Vistacampo no se hace responsable por daños indirectos, incidentales o consecuentes que puedan 
-                resultar del uso de nuestros servicios.
-              </p>
-            </section>
+      <section>
+        <h2>5. Modificaciones</h2>
+        <p>
+          Vistacampo podrá actualizar estos términos cuando sea necesario. Los cambios serán efectivos una vez
+          publicados en el sitio.
+        </p>
+      </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Modificaciones</h2>
-              <p className="text-gray-700 mb-4">
-                Nos reservamos el derecho de modificar estos términos en cualquier momento. 
-                Los cambios entrarán en vigor inmediatamente después de su publicación.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Contacto</h2>
-              <p className="text-gray-700 mb-4">
-                Si tiene preguntas sobre estos términos y condiciones, puede contactarnos en:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 ml-4">
-                <li>Email: info@vistacampo.com</li>
-                <li>Teléfono: (+58) 412-231-5968</li>
-                <li>Dirección: Vistacampo Therapeutic Center, Colonia Tovar, Venezuela</li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
+      <section>
+        <h2>6. Contacto</h2>
+        <p>Si desea hacer una consulta relacionada con estos términos, puede comunicarse a través de:</p>
+        <ul>
+          <li>Email: info@vistacampo.com</li>
+          <li>Teléfono: (+58) 412-231-5968</li>
+          <li>Ubicación: Colonia Tovar, Venezuela</li>
+        </ul>
+      </section>
+    </SiteLegalPage>
   )
 }
