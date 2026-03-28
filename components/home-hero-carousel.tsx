@@ -45,7 +45,7 @@ export function HomeHeroCarousel({ slides, children }: Props) {
   }
 
   return (
-    <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-[#0f241a] md:min-h-screen">
+    <section className="relative flex min-h-[calc(100svh-5rem)] items-center justify-center overflow-hidden bg-[#0f241a] lg:min-h-[calc(100svh-6rem)]">
       <div className="absolute inset-0 z-0">
         {slides.map((slide, index) => (
           <div
@@ -92,10 +92,10 @@ export function HomeHeroCarousel({ slides, children }: Props) {
 
       <div className="container relative z-20 mx-auto px-4">{children}</div>
 
-      <div className="absolute inset-x-0 bottom-8 z-20">
+      <div className="absolute inset-x-0 bottom-5 z-20 sm:bottom-6">
         <div className="container mx-auto px-4">
-          <div className="mx-auto flex max-w-6xl flex-col gap-4">
-            <div className="hidden items-center justify-between text-white/85 md:flex">
+          <div className="mx-auto flex max-w-6xl flex-col gap-2 2xl:gap-4">
+            <div className="hidden items-center justify-between text-white/85 2xl:flex">
               <div className="font-ui rounded-full border border-white/15 bg-black/20 px-4 py-2 text-sm font-medium backdrop-blur-md">
                 {slides[activeIndex]?.label}
               </div>

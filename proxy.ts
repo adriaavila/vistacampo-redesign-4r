@@ -26,6 +26,21 @@ export function proxy(request: NextRequest) {
     return;
   }
 
+  if (pathname === "/") {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set("x-vistacampo-locale", defaultLocale);
+    requestHeaders.set("x-vistacampo-pathname", pathname);
+
+    const url = request.nextUrl.clone();
+    url.pathname = `/${defaultLocale}/`;
+
+    return NextResponse.rewrite(url, {
+      request: {
+        headers: requestHeaders,
+      },
+    });
+  }
+
   const hasLocale = locales.some(
     (l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`),
   );

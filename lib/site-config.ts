@@ -1,5 +1,7 @@
+import { headers } from "next/headers"
+
 export const DEFAULT_SITE_URL = "https://vistacampo-redesign-4r.vercel.app"
-export const OG_IMAGE_VERSION = "20260328"
+export const OG_IMAGE_VERSION = "20260328b"
 
 export function getBaseUrl() {
   const siteUrl =
@@ -9,4 +11,20 @@ export function getBaseUrl() {
     DEFAULT_SITE_URL
 
   return siteUrl.replace(/\/$/, "")
+}
+
+export async function getRequestBaseUrl() {
+  const requestHeaders = await headers()
+  const forwardedHost = requestHeaders.get("x-forwarded-host")
+  const host = forwardedHost || requestHeaders.get("host")
+
+  if (!host) {
+    return getBaseUrl()
+  }
+
+  const proto =
+    requestHeaders.get("x-forwarded-proto") ||
+    (host.includes("localhost") || host.startsWith("127.0.0.1") ? "http" : "https")
+
+  return `${proto}://${host}`.replace(/\/$/, "")
 }

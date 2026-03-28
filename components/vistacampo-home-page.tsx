@@ -659,82 +659,84 @@ export function VistacampoHomePage({ locale }: { locale: Locale }) {
   return (
     <div className="overflow-hidden">
       <HomeHeroCarousel slides={heroSlides}>
-        <div className="grid items-end gap-10 pb-20 pt-28 lg:grid-cols-[1.1fr_0.9fr] lg:pb-28 lg:pt-36">
-          <div className="max-w-3xl text-center text-white">
-            <h1 className="mx-auto mt-8 max-w-4xl text-5xl font-semibold leading-[0.96] tracking-[-0.04em] text-balance sm:text-6xl lg:text-[5.5rem]">
+        <div className="grid items-center gap-8 py-12 sm:py-14 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:gap-8 lg:py-8 xl:py-10">
+          <div className="max-w-3xl text-center text-white lg:max-w-none lg:text-left">
+            <h1 className="mx-auto mt-6 max-w-[13.5ch] text-5xl font-semibold leading-[0.9] tracking-[-0.04em] text-balance sm:text-6xl lg:mx-0 lg:mt-0 lg:max-w-[15.75ch] lg:text-[3.75rem] xl:text-[4.35rem] 2xl:text-[4.9rem]">
               {content.hero.title}
-              <span className="mt-3 block text-[#d9c088]">{content.hero.emphasis}</span>
+              <span className="mt-2 block text-[#d9c088]">{content.hero.emphasis}</span>
             </h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/82 md:text-xl">
-              {content.hero.description}
-            </p>
+            <div className="mx-auto mt-5 flex max-w-2xl flex-col items-center">
+              <p className="max-w-2xl text-center text-base leading-7 text-white/82 sm:text-lg lg:max-w-xl lg:text-[1.02rem]">
+                {content.hero.description}
+              </p>
 
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="font-ui h-14 rounded-full bg-[#1a3628] px-7 text-[0.95rem] font-semibold text-[#fafafa] shadow-[0_20px_50px_-24px_rgba(26,54,40,0.95)] hover:bg-[#6b1f2b]"
-              >
-                <a href={content.hrefs.whatsapp} target="_blank" rel="noopener noreferrer">
-                  <WhatsAppCtaIcon tone="contrast" />
-                  {content.hero.primaryCta}
-                </a>
-              </Button>
-
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="font-ui h-14 rounded-full border-white/24 bg-white/8 px-7 text-[0.95rem] font-semibold text-white backdrop-blur-md hover:bg-white/16 hover:text-white"
-              >
-                <Link href={content.hrefs.treatment}>
-                  {content.hero.secondaryCta}
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {content.hero.pills.map((pill) => (
-                <span
-                  key={pill}
-                  className="font-ui inline-flex items-center rounded-full border border-white/16 bg-black/18 px-4 py-2 text-sm text-white/78 backdrop-blur-md"
+              <div className="mt-5 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="font-ui h-14 rounded-full bg-[#1a3628] px-7 text-[0.95rem] font-semibold text-[#fafafa] shadow-[0_20px_50px_-24px_rgba(26,54,40,0.95)] hover:bg-[#6b1f2b] lg:h-12 lg:px-6"
                 >
-                  {pill}
-                </span>
-              ))}
+                  <a href={content.hrefs.whatsapp} target="_blank" rel="noopener noreferrer">
+                    <WhatsAppCtaIcon tone="contrast" />
+                    {content.hero.primaryCta}
+                  </a>
+                </Button>
+
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="font-ui h-14 rounded-full border-white/24 bg-white/8 px-7 text-[0.95rem] font-semibold text-white backdrop-blur-md hover:bg-white/16 hover:text-white lg:h-12 lg:px-6"
+                >
+                  <Link href={content.hrefs.treatment}>
+                    {content.hero.secondaryCta}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+
+              <div className="mt-4 flex flex-wrap justify-center gap-3">
+                {content.hero.pills.map((pill) => (
+                  <span
+                    key={pill}
+                    className="font-ui inline-flex items-center rounded-full border border-white/16 bg-black/18 px-3.5 py-1.5 text-xs text-white/78 backdrop-blur-md sm:px-4 sm:py-2 sm:text-sm lg:rounded-none lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:text-[0.78rem] lg:tracking-[0.08em] lg:text-white/70 lg:backdrop-blur-none"
+                  >
+                    {pill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="lg:justify-self-end">
-            <div className="vc-shell max-w-xl border-white/12 bg-[rgba(246,242,236,0.14)] p-6 text-white sm:p-8">
+          <div className="lg:w-full lg:justify-self-end">
+            <div className="vc-shell max-w-xl border-white/12 bg-[rgba(246,242,236,0.14)] p-5 text-white sm:p-6 xl:max-w-[31rem] xl:p-7">
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="font-ui text-left text-xs uppercase tracking-[0.28em] text-white/60">
                     {content.hero.locationLabel}
                   </p>
-                  <h2 className="mt-3 text-3xl font-medium leading-tight text-white sm:text-4xl">
+                  <h2 className="mt-2 text-[1.95rem] font-medium leading-[1.03] text-white sm:text-[2.2rem]">
                     {content.hero.highlightTitle}
                   </h2>
                 </div>
-                <div className="hidden h-14 w-14 items-center justify-center rounded-full border border-white/16 bg-white/10 backdrop-blur-md sm:flex">
+                <div className="hidden h-12 w-12 items-center justify-center rounded-full border border-white/16 bg-white/10 backdrop-blur-md sm:flex">
                   <Trees className="h-6 w-6 text-[#d9c088]" />
                 </div>
               </div>
 
-              <p className="mt-5 text-base leading-8 text-white/74 sm:text-lg">
+              <p className="mt-4 text-[0.98rem] leading-7 text-white/74 sm:text-base">
                 {content.hero.highlightDescription}
               </p>
 
-              <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
                 {content.hero.stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="rounded-[1.5rem] border border-white/12 bg-black/18 px-4 py-5 backdrop-blur-md"
+                    className="rounded-[1.5rem] border border-white/12 bg-black/18 px-4 py-4 backdrop-blur-md"
                   >
-                    <div className="font-ui text-2xl font-semibold text-[#d9c088]">{stat.value}</div>
-                    <p className="mt-2 text-left text-sm leading-6 text-white/72">{stat.label}</p>
+                    <div className="font-ui text-xl font-semibold text-[#d9c088] sm:text-2xl">{stat.value}</div>
+                    <p className="mt-2 text-left text-xs leading-5 text-white/72 sm:text-sm sm:leading-6">{stat.label}</p>
                   </div>
                 ))}
               </div>
