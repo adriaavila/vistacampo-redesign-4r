@@ -35,16 +35,16 @@ const copyByLocale = {
 
 let assetPromise:
   | Promise<{
-      backgroundDataUri: string
-      logoDataUri: string
-    }>
+    backgroundDataUri: string
+    logoDataUri: string
+  }>
   | undefined
 
 async function loadAssets() {
   if (!assetPromise) {
     assetPromise = Promise.all([
-      readFile(new URL("../public/images/hero-1.png", import.meta.url)),
-      readFile(new URL("../public/images/logo-vistacampo.png", import.meta.url)),
+      readFile(new URL("../public/images/og-share-card.jpg", import.meta.url)),
+      readFile(new URL("../public/images/og-share-card.jpg", import.meta.url)),
     ]).then(([backgroundBuffer, logoBuffer]) => ({
       backgroundDataUri: `data:image/png;base64,${backgroundBuffer.toString("base64")}`,
       logoDataUri: `data:image/png;base64,${logoBuffer.toString("base64")}`,

@@ -158,38 +158,40 @@ export default function FacilitiesPage() {
               <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-[0.94] text-[#0f241a] sm:text-5xl lg:mx-0 lg:text-6xl">
                 Modern and comfortable facilities
               </h1>
-              <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl lg:mx-0">
-                Our facilities are designed to provide a safe, comfortable, and therapeutic environment for every
-                stage of recovery.
-              </p>
-              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-                {heroHighlights.map(({ icon: Icon, label }) => (
-                  <div
-                    key={label}
-                    className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/84 px-4 py-2 text-sm text-[rgba(29,47,38,0.76)] shadow-sm backdrop-blur-sm"
-                  >
-                    <Icon className="h-4 w-4 text-[#6b1f2b]" />
-                    <span>{label}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="w-full bg-[#1a3628] hover:bg-[#6b1f2b] sm:w-auto">
-                    <WhatsAppCtaIcon tone="contrast" />
-                    Schedule a visit
-                  </Button>
-                </a>
-                <Link href="/en/contacto">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="w-full border-[#1a3628] bg-white/76 text-[#1a3628] shadow-sm transition-all duration-300 hover:bg-[#1a3628] hover:text-[#fafafa] sm:w-auto"
-                  >
-                    Contact us
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+              <div className="mx-auto mt-5 flex max-w-2xl flex-col items-center">
+                <p className="max-w-2xl text-center text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl">
+                  Our facilities are designed to provide a safe, comfortable, and therapeutic environment for every
+                  stage of recovery.
+                </p>
+                <div className="mt-5 flex flex-wrap justify-center gap-3">
+                  {heroHighlights.map(({ icon: Icon, label }) => (
+                    <div
+                      key={label}
+                      className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/84 px-4 py-2 text-sm text-[rgba(29,47,38,0.76)] shadow-sm backdrop-blur-sm"
+                    >
+                      <Icon className="h-4 w-4 text-[#6b1f2b]" />
+                      <span>{label}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center">
+                  <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="w-full bg-[#1a3628] hover:bg-[#6b1f2b] sm:w-auto">
+                      <WhatsAppCtaIcon tone="contrast" />
+                      Schedule a visit
+                    </Button>
+                  </a>
+                  <Link href="/en/contacto">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="w-full border-[#1a3628] bg-white/76 text-[#1a3628] shadow-sm transition-all duration-300 hover:bg-[#1a3628] hover:text-[#fafafa] sm:w-auto"
+                    >
+                      Contact us
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
 

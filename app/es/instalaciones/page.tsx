@@ -143,58 +143,60 @@ export default function InstalacionesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(191,161,95,0.2),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(107,31,43,0.14),transparent_24%),linear-gradient(180deg,#f6f2ec_0%,#fafafa_72%)] py-12 sm:py-16 lg:py-20">
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(191,161,95,0.2),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(107,31,43,0.14),transparent_24%),linear-gradient(180deg,#f6f2ec_0%,#fafafa_72%)] py-12 sm:py-16 lg:min-h-[calc(100svh-6rem)] lg:py-6">
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-[linear-gradient(140deg,rgba(255,255,255,0.76),rgba(255,255,255,0.18)_40%,rgba(255,255,255,0.84))]"
         />
 
-        <div className="container relative z-10 mx-auto px-4">
-          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.92fr)] lg:gap-16">
+        <div className="container relative z-10 mx-auto px-4 lg:flex lg:min-h-[calc(100svh-6rem)] lg:items-center">
+          <div className="grid items-center gap-12 lg:w-full lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.84fr)] lg:gap-8">
             <div className="max-w-2xl text-center lg:text-left">
               <Badge variant="outline" className="vc-kicker mb-4">
                 Nuestras instalaciones
               </Badge>
-              <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-[0.94] text-[#0f241a] sm:text-5xl lg:mx-0 lg:text-6xl">
+              <h1 className="mx-auto mb-5 max-w-[12ch] text-4xl font-semibold leading-[0.94] text-[#0f241a] sm:text-5xl lg:mx-0 lg:text-[3.7rem]">
                 Instalaciones modernas y cómodas
               </h1>
-              <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl lg:mx-0">
-                Nuestras instalaciones están diseñadas para ofrecer un entorno seguro, cómodo y terapéutico durante
-                cada etapa de la recuperación.
-              </p>
-              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-                {heroHighlights.map(({ icon: Icon, label }) => (
-                  <div
-                    key={label}
-                    className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/84 px-4 py-2 text-sm text-[rgba(29,47,38,0.76)] shadow-sm backdrop-blur-sm"
-                  >
-                    <Icon className="h-4 w-4 text-[#6b1f2b]" />
-                    <span>{label}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="w-full bg-[#1a3628] hover:bg-[#6b1f2b] sm:w-auto">
-                    <WhatsAppCtaIcon tone="contrast" />
-                    Agendar visita
-                  </Button>
-                </a>
-                <Link href="/es/contacto">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="w-full border-[#1a3628] bg-white/76 text-[#1a3628] shadow-sm transition-all duration-300 hover:bg-[#1a3628] hover:text-[#fafafa] sm:w-auto"
-                  >
-                    Contáctanos
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+              <div className="mx-auto mt-5 flex max-w-2xl flex-col items-center">
+                <p className="max-w-2xl text-center text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl lg:text-lg">
+                  Nuestras instalaciones están diseñadas para ofrecer un entorno seguro, cómodo y terapéutico durante
+                  cada etapa de la recuperación.
+                </p>
+                <div className="mt-4 flex flex-wrap justify-center gap-2.5">
+                  {heroHighlights.map(({ icon: Icon, label }) => (
+                    <div
+                      key={label}
+                      className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/84 px-4 py-2 text-sm text-[rgba(29,47,38,0.76)] shadow-sm backdrop-blur-sm lg:px-3.5 lg:py-1.5 lg:text-[0.82rem]"
+                    >
+                      <Icon className="h-4 w-4 text-[#6b1f2b]" />
+                      <span>{label}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:justify-center">
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="w-full bg-[#1a3628] hover:bg-[#6b1f2b] sm:w-auto lg:px-6 lg:py-3 lg:text-base">
+                      <WhatsAppCtaIcon tone="contrast" />
+                      Agendar visita
+                    </Button>
+                  </a>
+                  <Link href="/es/contacto">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="w-full border-[#1a3628] bg-white/76 text-[#1a3628] shadow-sm transition-all duration-300 hover:bg-[#1a3628] hover:text-[#fafafa] sm:w-auto lg:px-6 lg:py-3 lg:text-base"
+                    >
+                      Contáctanos
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <div className="mx-auto w-full max-w-[38rem]">
-              <div className="vc-page-panel p-3">
+            <div className="mx-auto w-full max-w-[38rem] lg:max-w-[32rem]">
+              <div className="vc-page-panel p-3 lg:p-2.5">
                 <div className="relative overflow-hidden rounded-[1.5rem]">
                   <div className="absolute left-4 top-4 z-10 inline-flex rounded-full border border-white/50 bg-slate-950/62 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
                     Entorno terapéutico residencial
@@ -209,15 +211,15 @@ export default function InstalacionesPage() {
                       className="object-cover object-[center_35%]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/22 via-transparent to-white/8" />
-                    <div className="absolute inset-x-4 bottom-4 z-10 rounded-[1.25rem] border border-white/15 bg-slate-950/68 p-4 shadow-lg backdrop-blur-md">
-                      <p className="text-sm font-medium leading-relaxed text-white">
+                    <div className="absolute inset-x-4 bottom-4 z-10 rounded-[1.25rem] border border-white/15 bg-slate-950/68 p-4 shadow-lg backdrop-blur-md lg:p-3">
+                      <p className="text-sm font-medium leading-relaxed text-white lg:text-[0.82rem]">
                         Comodidad, privacidad y naturaleza integradas en la experiencia diaria del tratamiento.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-4 grid grid-cols-2 gap-4">
+              <div className="mt-4 grid grid-cols-2 gap-4 lg:hidden">
                 {heroSupportCards.map((card) => (
                   <div
                     key={card.label}
