@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button"
+import { OG_IMAGE_VERSION } from "@/lib/site-config"
+
+const ogImage = `/en/opengraph-image/?v=${OG_IMAGE_VERSION}`
 
 export const metadata: Metadata = {
   title: "Vistacampo - Addiction Rehabilitation Center in Colonia Tovar",
@@ -8,6 +11,14 @@ export const metadata: Metadata = {
   keywords:
     "addiction rehabilitation, detox, therapy, Colonia Tovar, Venezuela, treatment, recovery center",
   authors: [{ name: "Vistacampo" }],
+  alternates: {
+    canonical: "/en/",
+    languages: {
+      es: "/es/",
+      en: "/en/",
+      "x-default": "/es/",
+    },
+  },
   openGraph: {
     title: "Recovery is possible | Vistacampo",
     description:
@@ -15,9 +26,10 @@ export const metadata: Metadata = {
     siteName: "Vistacampo",
     locale: "en_US",
     type: "website",
+    url: "/en/",
     images: [
       {
-        url: "/en/opengraph-image/",
+        url: ogImage,
         width: 1200,
         height: 630,
         alt: "Vistacampo - Recovery is possible",
@@ -29,7 +41,7 @@ export const metadata: Metadata = {
     title: "Recovery is possible | Vistacampo",
     description:
       "Medical, psychological, and family treatment in a private, warm, and professional setting to begin a real recovery with dignity.",
-    images: ["/en/opengraph-image/"],
+    images: [ogImage],
   },
   robots: {
     index: true,

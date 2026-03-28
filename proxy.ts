@@ -30,7 +30,17 @@ export function proxy(request: NextRequest) {
     (l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`),
   );
   if (hasLocale) {
-    return;
+    const requestHeaders = new Headers(request.headers)
+    const locale = pathname.split("/")[1] || defaultLocale
+
+    requestHeaders.set("x-vistacampo-locale", locale)
+    requestHeaders.set("x-vistacampo-pathname", pathname)
+
+    return NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    })
   }
 
   const detected = getLocale(request);

@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { headers } from "next/headers"
 import { DM_Sans, Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
@@ -10,6 +11,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { locales, defaultLocale, type Locale } from "./i18n"
 import { I18nProvider } from "./i18n-provider"
 import { PerformanceMonitor } from "@/components/performance-monitor"
+import { getBaseUrl } from "@/lib/site-config"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,13 +34,6 @@ const dmSans = DM_Sans({
   display: "swap",
   preload: true,
 })
-
-const getBaseUrl = () => {
-  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
-  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
-  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  return 'https://vistacampo-redesign-4r.vercel.app';
-}
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
@@ -74,6 +69,13 @@ export const metadata: Metadata = {
       "Tratamiento médico, psicológico y familiar en un entorno privado, cálido y profesional para iniciar una recuperación real con dignidad.",
     images: ["/opengraph-image/"],
   },
+  alternates: {
+    languages: {
+      es: "/es/",
+      en: "/en/",
+      "x-default": "/es/",
+    },
+  },
   robots: {
     index: true,
     follow: true,
@@ -88,23 +90,19 @@ export const metadata: Metadata = {
   generator: "v0.dev",
 }
 
-// Locale-aware root layout using dynamic segment [lng] handled by proxy redirects
-export default function RootLayout({
+// Locale-aware root layout using path metadata injected by proxy.ts.
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  // Use default locale for SSR, will be updated client-side
-  const lng: Locale = defaultLocale
+  const requestHeaders = await headers()
+  const requestLocale = requestHeaders.get("x-vistacampo-locale")
+  const lng: Locale = locales.includes(requestLocale as Locale) ? (requestLocale as Locale) : defaultLocale
 
   return (
     <html lang={lng} className="light">
       <head>
-        {/* SEO: locale alternates (hreflang). Use static base to avoid runtime template parsing issues */}
-        <link rel="alternate" hrefLang="es" href="https://vistacampo.com/es/" />
-        <link rel="alternate" hrefLang="en" href="https://vistacampo.com/en/" />
-        <link rel="alternate" hrefLang="x-default" href="https://vistacampo.com/" />
-        
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//wa.me" />
       </head>
