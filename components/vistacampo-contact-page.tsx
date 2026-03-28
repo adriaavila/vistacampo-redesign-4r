@@ -211,6 +211,7 @@ export function VistacampoContactPage({ locale }: { locale: Locale }) {
         badge={copy.hero.badge}
         title={copy.hero.title}
         description={copy.hero.description}
+        centered
         highlights={[
           { icon: Shield, label: copy.hero.highlights[0] },
           { icon: Heart, label: copy.hero.highlights[1] },

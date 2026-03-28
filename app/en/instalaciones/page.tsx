@@ -143,40 +143,40 @@ export default function FacilitiesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(191,161,95,0.2),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(107,31,43,0.14),transparent_24%),linear-gradient(180deg,#f6f2ec_0%,#fafafa_72%)] py-12 sm:py-16 lg:py-20">
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(191,161,95,0.2),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(107,31,43,0.14),transparent_24%),linear-gradient(180deg,#f6f2ec_0%,#fafafa_72%)] py-12 sm:py-16 lg:min-h-[calc(100svh-6rem)] lg:py-4">
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-[linear-gradient(140deg,rgba(255,255,255,0.76),rgba(255,255,255,0.18)_40%,rgba(255,255,255,0.84))]"
         />
 
-        <div className="container relative z-10 mx-auto px-4">
-          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.92fr)] lg:gap-16">
-            <div className="max-w-2xl text-center lg:text-left">
+        <div className="container relative z-10 mx-auto px-4 lg:flex lg:min-h-[calc(100svh-6rem)] lg:items-center">
+          <div className="grid items-center gap-12 lg:w-full lg:grid-cols-[minmax(0,0.8fr)_minmax(380px,1.08fr)] lg:gap-7">
+            <div className="max-w-2xl text-center lg:mx-auto lg:max-w-xl">
               <Badge variant="outline" className="vc-kicker mb-4">
                 Our facilities
               </Badge>
-              <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-[0.94] text-[#0f241a] sm:text-5xl lg:mx-0 lg:text-6xl">
+              <h1 className="mx-auto mb-4 max-w-[11.5ch] text-4xl font-semibold leading-[0.94] text-[#0f241a] sm:text-5xl lg:text-[3.55rem]">
                 Modern and comfortable facilities
               </h1>
               <div className="mx-auto mt-5 flex max-w-2xl flex-col items-center">
-                <p className="max-w-2xl text-center text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl">
+                <p className="max-w-2xl text-center text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl lg:text-lg">
                   Our facilities are designed to provide a safe, comfortable, and therapeutic environment for every
                   stage of recovery.
                 </p>
-                <div className="mt-5 flex flex-wrap justify-center gap-3">
+                <div className="mt-4 flex flex-wrap justify-center gap-2.5">
                   {heroHighlights.map(({ icon: Icon, label }) => (
                     <div
                       key={label}
-                      className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/84 px-4 py-2 text-sm text-[rgba(29,47,38,0.76)] shadow-sm backdrop-blur-sm"
+                      className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/84 px-4 py-2 text-sm text-[rgba(29,47,38,0.76)] shadow-sm backdrop-blur-sm lg:px-3.5 lg:py-1.5 lg:text-[0.82rem]"
                     >
                       <Icon className="h-4 w-4 text-[#6b1f2b]" />
                       <span>{label}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center">
+                <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:justify-center">
                   <a href={WHATSAPP_LINK_EN} target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="w-full bg-[#1a3628] hover:bg-[#6b1f2b] sm:w-auto">
+                    <Button size="lg" className="w-full bg-[#1a3628] hover:bg-[#6b1f2b] sm:w-auto lg:px-6 lg:py-3 lg:text-base">
                       <WhatsAppCtaIcon tone="contrast" />
                       Schedule a visit
                     </Button>
@@ -185,7 +185,7 @@ export default function FacilitiesPage() {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full border-[#1a3628] bg-white/76 text-[#1a3628] shadow-sm transition-all duration-300 hover:bg-[#1a3628] hover:text-[#fafafa] sm:w-auto"
+                      className="w-full border-[#1a3628] bg-white/76 text-[#1a3628] shadow-sm transition-all duration-300 hover:bg-[#1a3628] hover:text-[#fafafa] sm:w-auto lg:px-6 lg:py-3 lg:text-base"
                     >
                       Contact us
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -195,31 +195,34 @@ export default function FacilitiesPage() {
               </div>
             </div>
 
-            <div className="mx-auto w-full max-w-[38rem]">
-              <div className="vc-page-panel p-3">
-                <div className="relative overflow-hidden rounded-[1.5rem]">
-                  <div className="absolute left-4 top-4 z-10 inline-flex rounded-full border border-white/50 bg-slate-950/62 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
-                    Residential therapeutic setting
-                  </div>
-                  <div className="relative aspect-[4/5] sm:aspect-[5/4]">
-                    <Image
-                      src="/images/vc-instalaciones.jpeg"
-                      alt="Main Vistacampo residence surrounded by nature"
-                      fill
-                      priority
-                      sizes="(min-width: 1024px) 38rem, (min-width: 640px) 80vw, 100vw"
-                      className="object-cover object-[center_35%]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/22 via-transparent to-white/8" />
-                    <div className="absolute inset-x-4 bottom-4 z-10 rounded-[1.25rem] border border-white/15 bg-slate-950/68 p-4 shadow-lg backdrop-blur-md">
-                      <p className="text-sm font-medium leading-relaxed text-white">
-                        Comfort, privacy, and nature integrated into the daily treatment experience.
-                      </p>
+            <div className="mx-auto w-full max-w-[38rem] lg:max-w-[38rem] xl:max-w-[40rem]">
+              <div className="lg:hidden">
+                <div className="vc-page-panel p-3 lg:p-2">
+                  <div className="relative overflow-hidden rounded-[1.5rem]">
+                    <div className="absolute left-4 top-4 z-10 inline-flex rounded-full border border-white/50 bg-slate-950/62 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+                      Residential therapeutic setting
+                    </div>
+                    <div className="relative aspect-[4/5] sm:aspect-[5/4]">
+                      <Image
+                        src="/images/vc-instalaciones.jpeg"
+                        alt="Main Vistacampo residence surrounded by nature"
+                        fill
+                        priority
+                        sizes="(min-width: 1024px) 38rem, (min-width: 640px) 80vw, 100vw"
+                        className="object-cover object-[center_35%]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/22 via-transparent to-white/8" />
+                      <div className="absolute inset-x-4 bottom-4 z-10 rounded-[1.25rem] border border-white/15 bg-slate-950/68 p-4 shadow-lg backdrop-blur-md lg:p-3">
+                        <p className="text-sm font-medium leading-relaxed text-white lg:text-[0.82rem]">
+                          Comfort, privacy, and nature integrated into the daily treatment experience.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-4 grid grid-cols-2 gap-4">
+
+              <div className="mt-4 grid grid-cols-2 gap-4 lg:hidden">
                 {heroSupportCards.map((card) => (
                   <div
                     key={card.label}
@@ -239,6 +242,54 @@ export default function FacilitiesPage() {
                     <p className="px-2 pb-2 pt-3 text-sm font-medium leading-snug text-slate-700">{card.label}</p>
                   </div>
                 ))}
+              </div>
+
+              <div className="hidden lg:block">
+                <div className="vc-page-panel p-2">
+                  <div className="grid gap-3.5">
+                    <div className="relative overflow-hidden rounded-[1.4rem]">
+                      <div className="absolute left-4 top-4 z-10 inline-flex rounded-full border border-white/50 bg-slate-950/62 px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+                        Residential therapeutic setting
+                      </div>
+                      <div className="relative aspect-[16/9]">
+                        <Image
+                          src="/images/vc-instalaciones.jpeg"
+                          alt="Main Vistacampo residence surrounded by nature"
+                          fill
+                          priority
+                          sizes="(min-width: 1280px) 40rem, (min-width: 1024px) 38rem, 100vw"
+                          className="object-cover object-[center_35%]"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/22 via-transparent to-white/8" />
+                        <div className="absolute inset-x-3 bottom-3 z-10 rounded-[1rem] border border-white/15 bg-slate-950/68 p-3 shadow-lg backdrop-blur-md">
+                          <p className="text-[0.82rem] font-medium leading-relaxed text-white">
+                            Comfort, privacy, and nature integrated into the daily treatment experience.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3.5">
+                      {heroSupportCards.map((card) => (
+                        <div key={card.label} className="relative overflow-hidden rounded-[1.2rem]">
+                          <div className="relative aspect-[16/10]">
+                            <Image
+                              src={card.src}
+                              alt={card.alt}
+                              fill
+                              sizes="(min-width: 1280px) 19rem, (min-width: 1024px) 17rem, 50vw"
+                              className="object-cover object-center"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/42 via-transparent to-transparent" />
+                            <div className="absolute inset-x-3 bottom-3 z-10 rounded-full border border-white/15 bg-slate-950/62 px-3 py-1.5 text-[0.7rem] font-medium leading-tight text-white backdrop-blur-sm">
+                              {card.label}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

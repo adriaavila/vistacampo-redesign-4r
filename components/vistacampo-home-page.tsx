@@ -655,6 +655,70 @@ function SectionHeader({
 export function VistacampoHomePage({ locale }: { locale: Locale }) {
   const content = contentByLocale[locale]
   const heroSlides = heroSlidesByLocale[locale]
+  const founderSection = (
+    <section className="bg-[rgba(246,242,236,0.7)] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="container">
+        <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+          <div className="mx-auto w-full max-w-[30rem]">
+            <p className="vc-kicker mb-5">{content.founder.eyebrow}</p>
+
+            <article className="vc-shell p-3 sm:p-4">
+              <div className="overflow-hidden rounded-[1.7rem] bg-[linear-gradient(180deg,#202532_0%,#0f241a_100%)]">
+                <div className="relative aspect-[2/3] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_52%),linear-gradient(180deg,#1c2230_0%,#121722_100%)] p-4 sm:p-6">
+                  <Image
+                    src={content.founder.imageSrc}
+                    alt={content.founder.imageAlt}
+                    width={682}
+                    height={1024}
+                    sizes="(max-width: 1024px) 100vw, 30rem"
+                    className="h-full w-full object-contain object-center"
+                  />
+                </div>
+
+                <div className="border-t border-white/10 px-6 py-6 text-white">
+                  <h3 className="text-2xl font-medium text-white">{content.founder.name}</h3>
+                  <p className="mt-2 text-sm text-white/76">{content.founder.role}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div>
+            <div className="max-w-3xl">
+              <h2 className="vc-section-title">{content.founder.title}</h2>
+              <p className="vc-section-copy mt-5">{content.founder.description}</p>
+            </div>
+
+            <div className="mt-8 vc-shell p-8 sm:p-10">
+              <p className="max-w-3xl text-xl leading-9 text-[#0f241a] sm:text-2xl">
+                “{content.founder.quote}”
+              </p>
+
+              <div className="mt-8 space-y-5">
+                {content.founder.body.map((paragraph) => (
+                  <p key={paragraph} className="text-base leading-8 text-[rgba(29,47,38,0.78)] sm:text-lg">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="font-ui mt-8 h-14 rounded-full border-[#1a3628] bg-transparent px-7 text-[0.95rem] font-semibold text-[#1a3628] hover:bg-[#1a3628] hover:text-[#fafafa]"
+              >
+                <Link href={content.hrefs.team}>
+                  {content.founder.cta}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 
   return (
     <div className="overflow-hidden">
@@ -744,6 +808,8 @@ export function VistacampoHomePage({ locale }: { locale: Locale }) {
           </div>
         </div>
       </HomeHeroCarousel>
+
+      {founderSection}
 
       <section className="relative px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="container">
@@ -856,69 +922,6 @@ export function VistacampoHomePage({ locale }: { locale: Locale }) {
                   </div>
                 </article>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[rgba(246,242,236,0.7)] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div className="container">
-          <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
-            <div className="mx-auto w-full max-w-[30rem]">
-              <p className="vc-kicker mb-5">{content.founder.eyebrow}</p>
-
-              <article className="vc-shell p-3 sm:p-4">
-                <div className="overflow-hidden rounded-[1.7rem] bg-[linear-gradient(180deg,#202532_0%,#0f241a_100%)]">
-                  <div className="relative aspect-[2/3] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_52%),linear-gradient(180deg,#1c2230_0%,#121722_100%)] p-4 sm:p-6">
-                    <Image
-                      src={content.founder.imageSrc}
-                      alt={content.founder.imageAlt}
-                      width={682}
-                      height={1024}
-                      sizes="(max-width: 1024px) 100vw, 30rem"
-                      className="h-full w-full object-contain object-center"
-                    />
-                  </div>
-
-                  <div className="border-t border-white/10 px-6 py-6 text-white">
-                    <h3 className="text-2xl font-medium text-white">{content.founder.name}</h3>
-                    <p className="mt-2 text-sm text-white/76">{content.founder.role}</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <div>
-              <div className="max-w-3xl">
-                <h2 className="vc-section-title">{content.founder.title}</h2>
-                <p className="vc-section-copy mt-5">{content.founder.description}</p>
-              </div>
-
-              <div className="mt-8 vc-shell p-8 sm:p-10">
-                <p className="max-w-3xl text-xl leading-9 text-[#0f241a] sm:text-2xl">
-                  “{content.founder.quote}”
-                </p>
-
-                <div className="mt-8 space-y-5">
-                  {content.founder.body.map((paragraph) => (
-                    <p key={paragraph} className="text-base leading-8 text-[rgba(29,47,38,0.78)] sm:text-lg">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="font-ui mt-8 h-14 rounded-full border-[#1a3628] bg-transparent px-7 text-[0.95rem] font-semibold text-[#1a3628] hover:bg-[#1a3628] hover:text-[#fafafa]"
-                >
-                  <Link href={content.hrefs.team}>
-                    {content.founder.cta}
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         </div>

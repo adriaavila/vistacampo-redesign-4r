@@ -39,14 +39,19 @@ export function SitePageHero({
 
       <div className="container relative z-10">
         <div className={contentClassName}>
-          <div className={cn(!visual && centered && "text-center", visual && "max-w-2xl", visual && !centered && "text-center lg:text-left")}>
+          <div
+            className={cn(
+              visual && "max-w-2xl",
+              centered ? "text-center" : !visual ? "text-center" : "text-center lg:text-left",
+            )}
+          >
             <Badge variant="outline" className="vc-kicker">
               {badge}
             </Badge>
             <h1
               className={cn(
                 "mt-6 text-4xl font-semibold leading-[0.96] text-[#0f241a] sm:text-5xl lg:text-6xl",
-                visual && "mx-auto lg:mx-0",
+                visual && (centered ? "mx-auto" : "mx-auto lg:mx-0"),
                 !visual && "mx-auto max-w-[14ch]",
               )}
             >
@@ -55,7 +60,7 @@ export function SitePageHero({
             <p
               className={cn(
                 "mt-6 text-lg leading-8 text-[rgba(29,47,38,0.78)] sm:text-xl",
-                visual && "mx-auto max-w-2xl lg:mx-0",
+                visual && (centered ? "mx-auto max-w-2xl" : "mx-auto max-w-2xl lg:mx-0"),
                 !visual && "mx-auto max-w-3xl",
               )}
             >

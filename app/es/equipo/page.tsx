@@ -182,18 +182,18 @@ export default function EquipoPage() {
 
         <div className="container relative z-10 mx-auto px-4">
           <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)] lg:gap-14">
-            <div className="order-2 text-center lg:order-1 lg:text-left">
+            <div className="order-2 text-center lg:order-1">
               <Badge variant="outline" className="vc-kicker mb-4">
-                Nuestro equipo
+                Equipo clínico
               </Badge>
-              <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-[0.95] text-[#0f241a] lg:mx-0 lg:text-6xl">
-                Conoce a nuestro equipo especializado
+              <h1 className="mx-auto mb-6 max-w-[12ch] text-4xl font-semibold leading-[0.95] text-[#0f241a] lg:text-6xl">
+                Especialistas en recuperación integral
               </h1>
-              <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl lg:mx-0">
-                Nuestro equipo multidisciplinario de profesionales está comprometido con brindar la más alta calidad de
-                atención y apoyo para tu proceso de recuperación.
+              <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-[rgba(29,47,38,0.78)] sm:text-xl">
+                Médicos, psicólogos y terapeutas con experiencia en adicciones, enfocados en una atención rigurosa,
+                humana y confidencial en cada etapa del proceso.
               </p>
-              <div className="flex flex-wrap justify-center gap-3 text-sm text-slate-700 lg:justify-start">
+              <div className="flex flex-wrap justify-center gap-3 text-sm text-slate-700">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(191,161,95,0.28)] bg-white/82 px-4 py-2 shadow-sm backdrop-blur-sm">
                   <Stethoscope className="h-4 w-4 text-[#6b1f2b]" />
                   <span>Especialistas médicos</span>
@@ -210,18 +210,24 @@ export default function EquipoPage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <div className="vc-page-panel relative mx-auto max-w-[36rem] overflow-hidden">
-                <div className="absolute inset-x-0 top-0 z-10 h-20 bg-gradient-to-b from-white/28 via-white/8 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 z-10 h-28 bg-gradient-to-t from-slate-950/14 via-slate-950/0 to-transparent" />
-                <div className="relative aspect-[4/3] sm:aspect-[3/2]">
-                  <Image
-                    src="/images/equipo-vistacampo.jpg"
-                    alt="Tres miembros del equipo de Vistacampo posando juntos en la clinica."
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 36rem, (min-width: 640px) 80vw, 100vw"
-                    className="object-cover object-[center_22%] sm:object-[center_24%]"
-                  />
+              <div className="vc-page-panel relative mx-auto max-w-[36rem] overflow-hidden p-3">
+                <div className="relative overflow-hidden rounded-[1.6rem]">
+                  <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.03)_18%,rgba(15,24,20,0.06)_44%,rgba(15,24,20,0.36)_100%)]" />
+                  <div className="relative aspect-[4/3] sm:aspect-[3/2]">
+                    <Image
+                      src="/images/equipo-vistacampo.jpg"
+                      alt="Tres miembros del equipo de Vistacampo posando juntos en la clinica."
+                      fill
+                      priority
+                      sizes="(min-width: 1024px) 36rem, (min-width: 640px) 80vw, 100vw"
+                      className="object-cover object-[center_22%] sm:object-[center_24%]"
+                    />
+                  </div>
+                  <div className="absolute inset-x-4 bottom-4 z-20 rounded-full border border-white/15 bg-slate-950/34 px-4 py-2.5 shadow-lg backdrop-blur-lg">
+                    <p className="text-sm font-medium leading-6 text-white">
+                      Un equipo experto que acompana tu recuperacion.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
