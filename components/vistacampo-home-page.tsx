@@ -191,8 +191,8 @@ const contentByLocale: Record<Locale, HomeContent> = {
   es: {
     hero: {
       eyebrow: "Centro terapéutico residencial en Colonia Tovar",
-      title: "Recuperar tu vida es posible",
-      emphasis: "con cuidado experto y confidencial",
+      title: "Vistacampo",
+      emphasis: "donde terminan las adicciones",
       description:
         "Tratamiento médico, psicológico y familiar en un entorno privado, cálido y profesional para iniciar una recuperación real con dignidad.",
       primaryCta: "Hablar por WhatsApp",
@@ -411,8 +411,8 @@ const contentByLocale: Record<Locale, HomeContent> = {
   en: {
     hero: {
       eyebrow: "Residential therapeutic center in Colonia Tovar",
-      title: "Recovery is possible",
-      emphasis: "with expert and confidential care",
+      title: "Vistacampo",
+      emphasis: "where addictions end",
       description:
         "Medical, psychological, and family-centered treatment in a private, calm, and professional setting designed for real recovery with dignity.",
       primaryCta: "Talk on WhatsApp",
@@ -723,9 +723,9 @@ export function VistacampoHomePage({ locale }: { locale: Locale }) {
   return (
     <div className="overflow-hidden">
       <HomeHeroCarousel slides={heroSlides}>
-        <div className="grid items-center gap-8 py-12 sm:py-14 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:gap-8 lg:py-8 xl:py-10">
-          <div className="max-w-3xl text-center text-white lg:max-w-none lg:text-left">
-            <h1 className="mx-auto mt-6 max-w-[13.5ch] text-5xl font-semibold leading-[0.9] tracking-[-0.04em] text-balance sm:text-6xl lg:mx-0 lg:mt-0 lg:max-w-[15.75ch] lg:text-[3.75rem] xl:text-[4.35rem] 2xl:text-[4.9rem]">
+        <div className="flex flex-col items-center justify-center py-12 sm:py-14 lg:py-20 xl:py-24">
+          <div className="max-w-3xl text-center text-white">
+            <h1 className="mx-auto mt-6 max-w-[15.75ch] text-5xl font-semibold leading-[0.9] tracking-[-0.04em] text-balance sm:text-6xl lg:mt-0 lg:text-[3.75rem] xl:text-[4.35rem] 2xl:text-[4.9rem]">
               {content.hero.title}
               <span className="mt-2 block text-[#d9c088]">{content.hero.emphasis}</span>
             </h1>
@@ -768,40 +768,6 @@ export function VistacampoHomePage({ locale }: { locale: Locale }) {
                   >
                     {pill}
                   </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:w-full lg:justify-self-end">
-            <div className="vc-shell max-w-xl border-white/12 bg-[rgba(246,242,236,0.14)] p-5 text-white sm:p-6 xl:max-w-[31rem] xl:p-7">
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="font-ui text-left text-xs uppercase tracking-[0.28em] text-white/60">
-                    {content.hero.locationLabel}
-                  </p>
-                  <h2 className="mt-2 text-[1.95rem] font-medium leading-[1.03] text-white sm:text-[2.2rem]">
-                    {content.hero.highlightTitle}
-                  </h2>
-                </div>
-                <div className="hidden h-12 w-12 items-center justify-center rounded-full border border-white/16 bg-white/10 backdrop-blur-md sm:flex">
-                  <Trees className="h-6 w-6 text-[#d9c088]" />
-                </div>
-              </div>
-
-              <p className="mt-4 text-[0.98rem] leading-7 text-white/74 sm:text-base">
-                {content.hero.highlightDescription}
-              </p>
-
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                {content.hero.stats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-[1.5rem] border border-white/12 bg-black/18 px-4 py-4 backdrop-blur-md"
-                  >
-                    <div className="font-ui text-xl font-semibold text-[#d9c088] sm:text-2xl">{stat.value}</div>
-                    <p className="mt-2 text-left text-xs leading-5 text-white/72 sm:text-sm sm:leading-6">{stat.label}</p>
-                  </div>
                 ))}
               </div>
             </div>

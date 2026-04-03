@@ -14,8 +14,8 @@ export const ogImageContentType = "image/png"
 const copyByLocale = {
   es: {
     badge: "Centro terapéutico residencial",
-    title: "Recuperar tu vida es posible",
-    emphasis: "con cuidado experto y confidencial",
+    title: "Vistacampo",
+    emphasis: "donde terminan las adicciones",
     description:
       "Tratamiento médico, psicológico y familiar en un entorno privado, cálido y profesional.",
     chips: ["Confidencialidad total", "Atención 24/7"],
@@ -24,8 +24,8 @@ const copyByLocale = {
   },
   en: {
     badge: "Residential treatment center",
-    title: "Recovery is possible",
-    emphasis: "with expert, confidential care",
+    title: "Vistacampo",
+    emphasis: "where addictions end",
     description: "Medical, psychological, and family treatment in a private, warm, professional setting.",
     chips: ["Full confidentiality", "24/7 support"],
     location: "Colonia Tovar, Venezuela",
@@ -43,8 +43,8 @@ let assetPromise:
 async function loadAssets() {
   if (!assetPromise) {
     assetPromise = Promise.all([
-      readFile(new URL("../public/images/og-share-card.jpg", import.meta.url)),
-      readFile(new URL("../public/images/og-share-card.jpg", import.meta.url)),
+      readFile(new URL("../public/images/hero-1.png", import.meta.url)),
+      readFile(new URL("../public/images/logo-vistacampo.png", import.meta.url)),
     ]).then(([backgroundBuffer, logoBuffer]) => ({
       backgroundDataUri: `data:image/png;base64,${backgroundBuffer.toString("base64")}`,
       logoDataUri: `data:image/png;base64,${logoBuffer.toString("base64")}`,
