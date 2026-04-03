@@ -37,7 +37,7 @@ const dmSans = DM_Sans({
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = await getRequestBaseUrl()
-  const ogImage = `${baseUrl}/images/og-share-card.jpg?v=${OG_IMAGE_VERSION}`
+  const ogImage = `${baseUrl}/images/vistacampo-capture.png?v=${OG_IMAGE_VERSION}`
 
   return {
     metadataBase: new URL(baseUrl),

@@ -1,7 +1,7 @@
 import { headers } from "next/headers"
 
 export const DEFAULT_SITE_URL = "https://vistacampo-redesign-4r.vercel.app"
-export const OG_IMAGE_VERSION = "20260328c"
+export const OG_IMAGE_VERSION = "20260403a"
 
 export function getBaseUrl() {
   const siteUrl =

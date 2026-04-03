@@ -4,7 +4,7 @@ import { getRequestBaseUrl, OG_IMAGE_VERSION } from "@/lib/site-config"
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = await getRequestBaseUrl()
-  const ogImage = `${baseUrl}/images/og-share-card.jpg?v=${OG_IMAGE_VERSION}`
+  const ogImage = `${baseUrl}/images/vistacampo-capture.png?v=${OG_IMAGE_VERSION}`
 
   return {
     title: "Vistacampo - Centro de Rehabilitación de Adicciones en Colonia Tovar",
