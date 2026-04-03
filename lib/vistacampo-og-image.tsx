@@ -19,7 +19,6 @@ const copyByLocale = {
     description:
       "Tratamiento médico, psicológico y familiar en un entorno privado, cálido y profesional.",
     chips: ["Confidencialidad total", "Atención 24/7"],
-    location: "Colonia Tovar, Venezuela",
     supportLabel: "Atención clínica integral",
   },
   en: {
@@ -28,7 +27,6 @@ const copyByLocale = {
     emphasis: "where addictions end",
     description: "Medical, psychological, and family treatment in a private, warm, professional setting.",
     chips: ["Full confidentiality", "24/7 support"],
-    location: "Colonia Tovar, Venezuela",
     supportLabel: "Integrated clinical care",
   },
 } as const
@@ -253,29 +251,6 @@ export async function renderVistacampoOgImage(locale: OgLocale) {
                       {chip}
                     </div>
                   ))}
-                </div>
-
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "12px",
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "rgba(250,250,250,0.64)",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      width: "54px",
-                      height: "1px",
-                      background: "rgba(217,192,136,0.6)",
-                    }}
-                  />
-                  {copy.location}
                 </div>
               </div>
             </div>
