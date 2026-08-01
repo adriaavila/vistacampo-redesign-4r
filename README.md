@@ -1,50 +1,32 @@
 # Vistacampo Redesign
 
-Sitio web institucional para un centro especializado en rehabilitación de adicciones, con enfoque en confianza, accesibilidad, contenido multilingüe y presencia digital profesional.
+Sitio institucional multilingüe para un centro especializado en **rehabilitación de adicciones**.
 
-## Qué es este proyecto
+**En vivo:** https://vistacampo-redesign-4r.vercel.app · **Categoría:** Web · **Estado:** en producción
 
-Este proyecto rediseña la presencia digital de Vistacampo para convertirla en una plataforma más clara, moderna y útil para pacientes, familias y personas que buscan información sobre tratamiento y recuperación.
+## El problema
 
-## El reto
+Diseñar una experiencia web sensible, creíble y bien estructurada para un tema profundamente
+delicado. No bastaba con "verse profesional": había que resolver a la vez confianza institucional,
+claridad de la oferta terapéutica, accesibilidad emocional para usuarios vulnerables, contenido en
+dos idiomas y buen desempeño en SEO y mobile.
 
-El reto principal fue **diseñar una experiencia web sensible, creíble y bien estructurada para un tema profundamente delicado**.
+## Cómo se resolvió
 
-En un proyecto así no basta con “verse profesional”. Había que resolver al mismo tiempo:
-
-- confianza institucional
-- claridad de la oferta terapéutica
-- accesibilidad emocional para usuarios vulnerables
-- contenido multilingüe y bien organizado
-- buen desempeño SEO y mobile
-
-## Cómo lo resolví
-
-- Construí una arquitectura multilingüe para español e inglés.
-- Organicé contenido institucional, blog, noticias, equipo e instalaciones dentro de una estructura coherente.
-- Incorporé MDX y rutas dinámicas para facilitar publicación de contenido.
-- Trabajé una identidad visual sobria y profesional orientada a transmitir calma, credibilidad y acompañamiento.
+- Arquitectura multilingüe (español / inglés) desde la ruta, no como parche.
+- Contenido institucional, blog, noticias, equipo e instalaciones dentro de una estructura coherente.
+- MDX y rutas dinámicas para que el equipo publique sin depender de desarrollo.
+- Identidad visual sobria orientada a transmitir calma, credibilidad y acompañamiento.
 
 ## Stack
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- MDX
-- i18n
-- Vercel Analytics
-- Vercel Speed Insights
+Next.js · React · TypeScript · Tailwind CSS · MDX · i18n · Vercel Analytics · Speed Insights
 
-## Lo que hace valioso este proyecto
+## Por qué está en el portafolio
 
-Este proyecto demuestra la capacidad de construir experiencias digitales para sectores sensibles, donde diseño, contenido y arquitectura deben trabajar juntos para generar confianza real.
-
-## Aprendizajes
-
-- En salud y recuperación, el diseño también comunica seguridad.
-- El contenido estructurado y localizable amplía mucho el valor del producto.
-- SEO, claridad y confianza no compiten: bien trabajados, se refuerzan entre sí.
+Es la prueba de trabajo en sectores sensibles y regulados, donde diseño, contenido y arquitectura
+tienen que trabajar juntos para generar confianza real. En salud, el diseño también comunica
+seguridad — y SEO, claridad y confianza no compiten cuando están bien trabajados.
 
 ## Desarrollo local
 
@@ -53,6 +35,7 @@ npm install
 npm run dev
 ```
 
-## Enlace del proyecto
+---
 
-- Repositorio: https://github.com/adriaavila/vistacampo-redesign-4r
+**Construido por [creativ3](https://allok.fun)** — software y automatización para negocios.
+[Ver el portafolio](https://allok.fun/projects) · [Pedir cotización](https://allok.fun/cotizar)
